@@ -1,0 +1,200 @@
+/**
+ * @description 首页css
+ * @author   sherlock
+ * @time     1：20
+ */
+
+
+.xy-content{
+    width: 100%;
+    height: 100%;
+}
+
+.xy-content .xy-fixrelative{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    -webkit-transition: -webkit-transform 1s ease;
+    -moz-transition: -moz-transform 1s ease;
+    -o-transition: -o-transform 1s ease;
+    transition: transform 1s ease;
+}
+
+
+.xy-fixrelative .xy-figure {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1000;
+}
+
+.xy-figure .xy-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    line-height: 0;
+    z-index: -1;
+}
+.xy-figure .xy-bg.bg-default{
+    background: #ffffff;
+}
+
+.xy-figure .xy-bg img {
+    width: 100%;
+    height: 100%;
+    min-width: 1003px;
+}
+
+
+
+/**
+ * 圆点滑动
+ */
+
+/** 右测居中 **/
+.xy-dot-main{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 225px;
+    height: 156px;
+    margin-top: -78px;
+    z-index: 9000;
+
+}
+.xy-dot{
+    float: right;
+    width: 125px;
+    padding-right: 100px;
+}
+
+
+.xy-dot li:after{
+    content: '';
+    background: transparent url("../../images/dot.png") no-repeat;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-left: 10px;
+    background-position: -15px  0;
+
+}
+.xy-dot.inverse li:after{
+    content: '';
+    background: transparent url("../../images/dot.png") no-repeat;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-left: 10px;
+    background-position: -45px  0;
+}
+
+.xy-dot.inverse li.active:after{
+
+    background-position:  -30px  0;
+}
+.xy-dot.inverse li {
+    color: #0b6bd5;
+}
+.xy-dot li.active:after{
+    background-position: 0  0;
+}
+
+
+.xy-dot li{
+    float: right;
+    width: 100px;
+    height: 39px;
+    padding-right: 18px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    line-height: 39px;
+    text-align: right;
+}
+
+
+
+.xy-inner{
+    margin: 0 auto;
+    padding-top: 70px;
+}
+
+/** 第一张图片测试 **/
+.xy-inner-message{
+    background-image: url("../../images/version.png");
+    background-repeat: no-repeat;
+    width: 435px;
+    height: 200px;
+}
+.xy-inner-message h2,.xy-inner-message p {
+    width: 310px;
+    height: 0;
+    overflow: hidden;
+    padding-top: 55px;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+.xy-inner-left{
+    margin-left: 40px;
+    margin-top: 90px;
+}
+.xy-inner-btns{
+    margin-top: 60px;
+    margin-bottom: 35px;
+}
+.xy-btn{
+    text-align: center;
+    font-size: 22px;
+
+    width: 208px;
+    height: 60px;
+    line-height: 55px;
+    margin: 15px 0;
+}
+.xy-btn.dashed{
+    background: none;
+    color: #ffffff;
+}
+.xy-btn.dashed{
+    border : 3px dashed #FFFFFF;
+
+}
+.xy-btn.dashed:hover{
+    /*border : 3px dashed #1475e1;*/
+    color: #1475e1;
+    background: #ffffff;
+}
+
+.xy-icon{
+    background-image: url("../../images/icon.png");
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -4px;
+    margin-right: 15px;
+}
+
+.xy-icon.ios{
+    background-position:  0 0;
+}
+.xy-icon.android{
+    background-position: -30px  0px;
+}
+
+
+.xy-btn.dashed:hover .xy-icon.android{
+    background-position: -30px -30px;
+}
+.xy-btn.dashed:hover .xy-icon.ios{
+    background-position:  0px -30px;
+}

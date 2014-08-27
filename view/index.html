@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+
+    <!-- 基本配置信息 -->
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <!-- seo 优化部分 -->
+    <meta name="title" content="校园云官网 天翼校园云" />
+    <meta name="keywords" content="校园云 皆知 大学 高校 微信 公众 服务 平台" />
+    <meta name="author" content="sherlock" />
+    <meta name="email" content="920825209@qq.com" />
+    <meta name="Description" content="校园云官网 天翼校园云"/>
+
+    <!--标题-->
+    <title>校园云官网 天翼校园云</title>
+
+
+    <!--reset css  -->
+    <link href="../static/css/template/normalize.css" rel="stylesheet" type="text/css" />
+
+    <!--common css  -->
+    <link href="../static/css/template/template.css" rel="stylesheet" type="text/css" />
+
+
+    <!-- 小于ie9 的文件 -->
+    <!--[if lt IE 9]>
+    <script src="../static/js/ie9/html5shiv.min.js"></script>
+    <script src="../static/js/ie9/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- seajs -->
+    <script type="text/javascript" src="../static/js/sea-modules/seajs/2.3.0/dist/sea.js"></script>
+    <script type="text/javascript" src="../static/js/sea-modules/seajs_config.js"></script>
+
+    <!--index css  -->
+    <link href="../static/css/service/index.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body>
+
+        <header  id="xy-header" class="xy-header ">
+             <nav class="xy-nav w1000">
+                  <a class="logo-base pull-left" href="javascript:void(0)">
+                      <img src="../static/images/logo.png"  width="170" height="50"/>
+                  </a>
+                  <ul class="xy-nav-main pull-right">
+                      <li class="active"><a href="javascript:void(0)">首页</a></li>
+                      <li class=""><a href="javascript:void(0)">功能介绍</a></li>
+                      <li class=""><a href="javascript:void(0)">信息服务平台</a></li>
+                      <li class=""><a href="javascript:void(0)">智慧迎新</a></li>
+                      <li class=""><a href="javascript:void(0)">联系我们</a></li>
+                  </ul>
+             </nav>
+        </header>
+
+
+        <section>
+            <div class="xy-content">
+
+                <section class="xy-fixrelative" id="xy-fixrelative">
+
+                        <!-- 首页 -->
+                        <div class="xy-figure" id="figph1" style="height: 720px;">
+                            <!--<div class="xy-inner clearfix w1000">-->
+                                    <!--<div class="ib xy-inner-left pull-left">-->
+                                        <!--<section class="xy-inner-message">-->
+                                            <!--<h2>4.0 beta</h2>-->
+                                            <!--<p>只为给你一个简单的校园</p>-->
+                                        <!--</section>-->
+                                        <!--<section class="xy-inner-btns">-->
+                                                <!--<div>-->
+                                                    <!--<button class="xy-btn dashed"><i class="xy-icon android"></i>Android</button>-->
+                                                <!--</div>-->
+                                                <!--<div>-->
+                                                    <!--<button class="xy-btn dashed"><i class="xy-icon ios"></i>Appstore</button>-->
+                                                <!--</div>-->
+                                        <!--</section>-->
+                                        <!---->
+                                        <!--<div>-->
+                                            <!--<img src="../static/images/2code.png" width="100" height="100"/>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="ib xy-inner-left pull-right">-->
+
+                                    <!--</div>-->
+                            <!--</div>-->
+                            <div class="xy-bg">
+                                <img id="bg01" src="../static/images/bg1.jpg" alt="1">
+                            </div>
+                        </div>
+
+                        <!--UI-->
+                        <div class="xy-figure" id="figph2" style="">
+
+                            <div class="xy-bg">
+                                <img id="bg02" src="../static/images/bg2.jpg" alt="1">
+                            </div>
+
+                        </div>
+
+                        <!--我的大学-->
+                        <div class="xy-figure" id="figph3" style="">
+
+                            <div class="xy-bg bg-default">
+                                <!--<img id="bg03" src="../static/images/bg3.jpg" alt="1">-->
+                            </div>
+
+                        </div>
+
+                        <!--发现-->
+                        <div class="xy-figure" id="figph4" style="height: 720px;">
+
+                            <div class="xy-bg">
+                                <img id="bg04" src="../static/images/bg3.jpg" alt="1">
+                            </div>
+
+                        </div>
+
+                    <!--生活-->
+                    <div class="xy-figure" id="figph5" style="height: 720px;">
+                        <div class="xy-bg bg-default">
+                            <!--<img id="bg03" src="../static/images/bg3.jpg" alt="1">-->
+                        </div>
+                    </div>
+
+
+                </section>
+
+
+                <!--圆点滑动-->
+                <div class="xy-dot-main" id="xy-dot-main">
+                    <ul id="xy-dot" class="xy-dot" >
+                        <li tabid="0" class="active"></li>
+                        <li tabid="1" class=""></li>
+                        <li tabid="2" class=""></li>
+                        <li tabid="3" class=""></li>
+                        <li tabid="4"></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+
+        </footer>
+
+
+
+</body>
+
+<script type="text/javascript" >
+    seajs.use("template/template",function(){
+            seajs.use("service/index");
+    });
+</script>
+</html>

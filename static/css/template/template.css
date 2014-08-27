@@ -1,0 +1,125 @@
+/**
+ * @description 公共部分的CSS
+ * @author   sherlock
+ * @time     1：20
+ */
+
+html, body {
+    width: 100%;
+
+    /** 设置最小宽度 **/
+    min-width: 1003px;
+    overflow: hidden;
+
+    /** 字体类型 **/
+    font-family: "microsoft yahei", "宋体", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    /** 字体大小 **/
+    font-size: 100%;
+    /** 字体颜色 **/
+    color: #333;
+}
+
+ul li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    /** 字体颜色 **/
+    color: #333;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+
+
+
+
+/* 默认色 */
+header.xy-header{
+
+    /** 固定头部 **/
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index : 10001;
+    transition: background 1.5s ease;
+
+
+}
+
+/** 反色 **/
+header.xy-header.inverse{
+    background: #0b6bd5;
+    color: #ffffff;
+}
+
+
+/**
+ * 导航
+ */
+nav.xy-nav {
+    height: 70px;
+    margin: 0 auto;
+}
+
+
+/* logo图片 */
+.xy-nav .logo-base {
+    display: block;
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+
+}
+
+/* 导航内容 */
+.xy-nav .xy-nav-main{
+    overflow: hidden;
+    line-height: 33px;
+}
+
+.xy-nav .xy-nav-main > li{
+    float: left;
+    padding: 5px 10px;
+    margin: 0 10px;
+}
+.xy-nav .xy-nav-main  >li >a{
+    display: block;
+    color: #ffffff;
+    cursor: pointer;
+    /*font-size: 18px;*/
+}
+
+
+
+
+
+/**
+ * 常用工具类
+ */
+
+.ib {
+    /** ie8+ **/
+    display: inline-block;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+}
+.w1000{
+    width: 1003px;
+}
+
+
+
