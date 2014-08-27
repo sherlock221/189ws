@@ -198,3 +198,9 @@
 .xy-btn.dashed:hover .xy-icon.ios{
     background-position:  0px -30px;
 }
+
+
+/** 手 **/
+.xy-hand{
+    background-image: url("../");
+}
