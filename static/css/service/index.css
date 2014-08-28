@@ -71,7 +71,7 @@
 .xy-dot{
     float: right;
     width: 125px;
-    padding-right: 100px;
+    padding-right: 45px;
 }
 
 
@@ -123,15 +123,19 @@
 
 .xy-inner{
     margin: 0 auto;
-    padding-top: 70px;
+    padding-top: 70px; /** 留出导航 **/
+    height: inherit;
 }
-
+.xy-inner-rel{
+    position: relative;
+    height: inherit;
+}
 /** 第一张图片测试 **/
 .xy-inner-message{
     background-image: url("../../images/version.png");
     background-repeat: no-repeat;
-    width: 435px;
-    height: 200px;
+    width: 351px;
+    height: 170px;
 }
 .xy-inner-message h2,.xy-inner-message p {
     width: 310px;
@@ -144,27 +148,26 @@
 }
 .xy-inner-left{
     margin-left: 40px;
-    margin-top: 90px;
+    /*margin-top: 90px;*/
 }
 .xy-inner-btns{
-    margin-top: 60px;
+    margin-top: 27px;
     margin-bottom: 35px;
 }
 .xy-btn{
     text-align: center;
     font-size: 22px;
-
-    width: 208px;
-    height: 60px;
-    line-height: 55px;
-    margin: 15px 0;
+    width: 176px;
+    height: 50px;
+    line-height: 42px;
+    margin: 12px 0;
 }
 .xy-btn.dashed{
     background: none;
     color: #ffffff;
 }
 .xy-btn.dashed{
-    border : 3px dashed #FFFFFF;
+    border : 2px dashed #FFFFFF;
 
 }
 .xy-btn.dashed:hover{
@@ -180,7 +183,7 @@
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    top: -4px;
+    top: -2px;
     margin-right: 15px;
 }
 
@@ -202,5 +205,45 @@
 
 /** 手 **/
 .xy-hand{
-    background-image: url("../");
+    background-image: url("../../images/iphone.png");
+    width: 431px;
+    height: 520px;
+    margin-right : 70px;
+    position: relative;
+}
+.xy-hand-info{
+    position: absolute;
+    top: 14.6%;
+    right: 15.3%;
+}
+.xy-center{
+    position: absolute;
+    top: 50%;
+}
+
+
+/** 二号层文字 **/
+.xy-ui-text{
+    background: url("../../images/ui-text.jpg") no-repeat;
+    width: 536px;
+    height: 235px;
+    position: relative;
+    left: -85px; /** 图片进行hack **/
+}
+
+.xy-ui-text h2,.xy-ui-text p {
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+/** 二号层手机 **/
+.xy-iphone-02{
+   background-image: url("../../images/iphone02.png");
+   width: 510px;
+   height: 316px;
+   position: relative;
+   right: 22px;
 }

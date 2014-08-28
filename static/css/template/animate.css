@@ -26,25 +26,154 @@
     100% { -ms-transform: scale(1);}
 }
 
+.an-amplify{
+    animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
+    -webkit-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
+    -moz-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
+    -ms-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
+    -o-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
+}
+
+
 
 /** 缩小 **/
 @keyframes reduce {
-    0%{ transform: scale(0);}
-    100% { transform: scale(1);}
+    0%{ transform: scale(1);}
+    100% { transform: scale(0);}
 }
 @-moz-keyframes reduce {
-    0%{ transform: scale(0);}
-    100% { transform: scale(1);}
+    0%{ transform: scale(1);}
+    100% { transform: scale(0);}
 }
 @-webkit-keyframes reduce {
-    0%{ -webkit-transform: scale(0);}
-    100% { -webkit-transform: scale(1);}
+    0%{ -webkit-transform: scale(1);}
+    100% { -webkit-transform: scale(0);}
 }
 @-o-keyframes reduce {
-    0%{ -o-transform: scale(0);}
-    100% { -o-transform: scale(1);}
+    0%{ -o-transform: scale(1);}
+    100% { -o-transform: scale(0);}
 }
 @-ms-keyframes reduce{
-    0%{ -ms-transform: scale(0);}
-    100% { -ms-transform: scale(1);}
+    0%{ -ms-transform: scale(1);}
+    100% { -ms-transform: scale(0);}
 }
+
+
+.an-reduce{
+    animation : reduce 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
+    -webkit-animation : reduce 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
+    -moz-animation : reduce 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
+    -ms-animation : reduce 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
+    -o-animation : reduce 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
+}
+
+
+
+/* 向上一阶  向下二段渐隐  */
+@keyframes thiAni{
+    0%,100%{transform:translateY(0);opacity: 0;}
+    25%{transform:translateY(-60px);opacity: 1;}
+    50%{transform:translateY(-30px);opacity: 1;}
+}
+
+@-moz-keyframes thiAni{
+    0%,100%{transform:translateY(0);opacity: 0;}
+    25%{transform:translateY(-60px);opacity: 1;}
+    50%{transform:translateY(-30px);opacity: 1;}
+}
+
+@-webkit-keyframes thiAni{
+    0%,100%{-webkit-transform:translateY(0);opacity: 0;}
+    25%{-webkit-transform:translateY(-60px);opacity: 1;}
+    50%{-webkit-transform:translateY(-30px);opacity: 1;}
+}
+
+@-o-keyframes thiAni{
+    0%,100%{-o-transform:translateY(0);opacity: 0;}
+    25%{-o-transform:translateY(-60px);opacity: 1;}
+    50%{-o-transform:translateY(-30px);opacity: 1;}
+}
+@-ms-keyframes thiAni{
+    0%,100%{-ms-transform:translateY(0);opacity: 0;}
+    25%{-ms-transform:translateY(-60px);opacity: 1;}
+    50%{-ms-transform:translateY(-30px);opacity: 1;}
+}
+
+
+.an-thiAni{
+    -webkit-animation: thiAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    -moz-animation: thiAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    -o-animation: thiAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    animation: thiAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+}
+
+
+/* 向上一阶 向下渐隐  */
+@keyframes secAni{
+    0%,100%{transform:translateY(0);opacity: 0;}
+    25%,50%{transform:translateY(-30px);opacity: 1;}
+}
+
+@-moz-keyframes secAni{
+    0%,100%{transform:translateY(0);opacity: 0;}
+    25%,50%{transform:translateY(-30px);opacity: 1;}
+}
+
+@-webkit-keyframes secAni{
+    0%,100%{-webkit-transform:translateY(0);opacity: 0;}
+    25%,50%{-webkit-transform:translateY(-30px);opacity: 1;}
+}
+
+@-o-keyframes secAni{
+    0%,100%{-o-transform:translateY(0);opacity: 0;}
+    25%,50%{-o-transform:translateY(-30px);opacity: 1;}
+}
+@-ms-keyframes secAni{
+    0%,100%{-ms-transform:translateY(0);opacity: 0;}
+    25%,50%{-ms-transform:translateY(-30px);opacity: 1;}
+}
+
+.an-secAni{
+    -webkit-animation: secAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    -moz-animation: secAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    -o-animation: secAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+    animation: secAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
+}
+
+/** animate 常用类 **/
+
+@-webkit-keyframes slideTop{
+    0%{-webkit-transform:translateY(55px);opacity: 0;}
+    100%{-webkit-transform:translateY(0px);opacity: 1;}
+    /*25%,50%{transform:translateY(-30px);opacity: 1;}*/
+}
+
+
+.trans .an-slideTop{
+    animation : slideTop 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1s;
+    -webkit-animation : slideTop 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1s ;
+}
+
+
+
+
+/** 保持结束帧 **/
+.an-util-forwards{
+    -webkit-animation-fill-mode: forwards !important;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+/** 保持开始帧 **/
+.an-util-backwards{
+    -webkit-animation-fill-mode: forwards  !important;;
+    -moz-animation-fill-mode: backwards;
+    -o-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+
+
+
+

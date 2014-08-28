@@ -48,16 +48,28 @@ define(function (require, exports, module) {
             UI.Dot.on("click", ".xy-dot > li", function () {
                 var $this = $(this);
                 var index = $this.attr("tabid");
+                //添加trans
+                var xyList = UI.FixRelative.find(".xy-figure");
+                xyList.removeClass("trans");
+                setTimeout(function(
+                    ){
+                    xyList.filter("[id='figph"+index+"']").addClass("trans");
+
+                },1000);
+
                 $this.addClass("active").siblings().removeClass("active");
+
                 Cons.currentIndex = index;
-                transformLayer(index);
+
                 setTimeout(function () {
                     //判断是否需要反色
                     if (index == "2" || index == "4")
                         toggleInverse(true);
                     else
                         toggleInverse(false);
-                }, 500);
+                }, 0);
+
+                transformLayer(index);
 
 
             });

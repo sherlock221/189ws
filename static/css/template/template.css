@@ -46,6 +46,7 @@ header.xy-header{
     width: 100%;
     z-index : 10001;
     transition: background 1.5s ease;
+    height: 60px;
 
 
 }
@@ -61,7 +62,7 @@ header.xy-header.inverse{
  * 导航
  */
 nav.xy-nav {
-    height: 70px;
+   height: inherit;
     margin: 0 auto;
 }
 
@@ -70,7 +71,7 @@ nav.xy-nav {
 .xy-nav .logo-base {
     display: block;
     position: relative;
-    top: 10px;
+    top: 14px;
     cursor: pointer;
 
 }
@@ -78,7 +79,7 @@ nav.xy-nav {
 /* 导航内容 */
 .xy-nav .xy-nav-main{
     overflow: hidden;
-    line-height: 33px;
+    line-height: 22px;
 }
 
 .xy-nav .xy-nav-main > li{
@@ -90,7 +91,7 @@ nav.xy-nav {
     display: block;
     color: #ffffff;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 
