@@ -210,6 +210,7 @@
     height: 520px;
     margin-right : 70px;
     position: relative;
+
 }
 .xy-hand-info{
     position: absolute;
@@ -239,6 +240,22 @@
     text-indent: -9999px;
 }
 
+.xy-my-school{
+    background-image: url("../../images/my-school.jpg");
+    width: 524px;
+    height: 288px;
+    position: relative;
+    left: -85px; /** 图片进行hack **/
+}
+
+.xy-my-school h2,.xy-my-school p {
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
 /** 二号层手机 **/
 .xy-iphone-02{
    background-image: url("../../images/iphone02.png");
@@ -246,4 +263,38 @@
    height: 316px;
    position: relative;
    right: 22px;
+}
+
+.xy-ip-bg-01{
+    position:absolute; top: 32px;  left: 52px;
+    z-index: 5;
+}
+
+.xy-ip-bg-02{
+    position:absolute; top: 32px;  left: 52px;
+    z-index: 6;
+}
+
+.xy-ip-bg-03{
+    position:absolute; top: 32px;  left: 52px;
+    z-index: 7;
+    opacity: 0;
+}
+
+.xy-discover{
+    background-image: url("../../images/discover.jpg");
+    width: 549px;
+    height: 280px;
+    position: relative;
+    left: -85px; /** 图片进行hack **/
+}
+
+
+
+.xy-discover h2,.xy-discover p {
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
 }

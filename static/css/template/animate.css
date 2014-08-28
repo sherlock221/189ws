@@ -71,41 +71,88 @@
 
 /* 向上一阶  向下二段渐隐  */
 @keyframes thiAni{
-    0%,100%{transform:translateY(0);opacity: 0;}
-    25%{transform:translateY(-60px);opacity: 1;}
-    50%{transform:translateY(-30px);opacity: 1;}
+    0%{-webkit-transform:translateY(0);opacity: 0;}
+    25%{-webkit-transform:translateY(-60px);opacity: 1;}
+    50%{-webkit-transform:translateY(-30px);opacity: 1;}
+    100%{opacity: 1;}
 }
 
 @-moz-keyframes thiAni{
-    0%,100%{transform:translateY(0);opacity: 0;}
-    25%{transform:translateY(-60px);opacity: 1;}
-    50%{transform:translateY(-30px);opacity: 1;}
+    0%{-webkit-transform:translateY(0);opacity: 0;}
+    25%{-webkit-transform:translateY(-60px);opacity: 1;}
+    50%{-webkit-transform:translateY(-30px);opacity: 1;}
+    100%{opacity: 1;}
 }
 
 @-webkit-keyframes thiAni{
-    0%,100%{-webkit-transform:translateY(0);opacity: 0;}
+    0%{-webkit-transform:translateY(0);opacity: 0;}
     25%{-webkit-transform:translateY(-60px);opacity: 1;}
     50%{-webkit-transform:translateY(-30px);opacity: 1;}
+    100%{opacity: 1;}
 }
 
 @-o-keyframes thiAni{
-    0%,100%{-o-transform:translateY(0);opacity: 0;}
-    25%{-o-transform:translateY(-60px);opacity: 1;}
-    50%{-o-transform:translateY(-30px);opacity: 1;}
+    0%{-webkit-transform:translateY(0);opacity: 0;}
+    25%{-webkit-transform:translateY(-60px);opacity: 1;}
+    50%{-webkit-transform:translateY(-30px);opacity: 1;}
+    100%{opacity: 1;}
 }
 @-ms-keyframes thiAni{
-    0%,100%{-ms-transform:translateY(0);opacity: 0;}
-    25%{-ms-transform:translateY(-60px);opacity: 1;}
-    50%{-ms-transform:translateY(-30px);opacity: 1;}
+    0%{-webkit-transform:translateY(0);opacity: 0;}
+    25%{-webkit-transform:translateY(-60px);opacity: 1;}
+    50%{-webkit-transform:translateY(-30px);opacity: 1;}
+    100%{opacity: 1;}
 }
 
 
-.an-thiAni{
+.trans  .an-thiAni{
+    opacity: 0;
     -webkit-animation: thiAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
     -moz-animation: thiAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
     -o-animation: thiAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
     animation: thiAni 2s cubic-bezier(0, .25, .08, 1) 0.6s;
 }
+
+
+/** 左侧划入 **/
+.trans .an-slidepop{
+    -webkit-animation : slidepop 0.8s cubic-bezier(0, .25, .08, 1) 2.8s;
+    -moz-animation : slidepop 0.8s cubic-bezier(0, .25, .08, 1) 2.8s;
+    -o-animation : slidepop 0.8s cubic-bezier(0, .25, .08, 1) 2.8s;
+    animation : slidepop 0.8s cubic-bezier(0, .25, .08, 1) 2.8s;
+}
+@keyframes slidepop{
+    0%{transform:translateY(-30px) translateX(-30px);opacity: 0;}
+    100%{transform:translateY(0) translateY(0);opacity: 1;}
+}
+
+@-moz-keyframes slidepop{
+    0%{-moz-transform:translateY(-30px) translateX(-30px);opacity: 0;}
+    100%{-moz-transform:translateY(0) translateY(0);opacity: 1;}
+}
+
+@-webkit-keyframes slidepop{
+    0%{-webkit-transform:translateY(-30px) translateX(-30px);opacity: 0;}
+    100%{-webkit-transform:translateY(0) translateY(0);opacity: 1;}
+}
+
+@-o-keyframes slidepop{
+    0%{-o-transform:translateY(-30px) translateX(-30px);opacity: 0;}
+    100%{-o-transform:translateY(0) translateY(0);opacity: 1;}
+}
+@-ms-keyframes slidepop{
+    0%{-ms-transform:translateY(-30px) translateX(-30px);opacity: 0;}
+    100%{-ms-transform:translateY(0) translateY(0);opacity: 1;}
+}
+
+
+
+
+
+
+
+
+
 
 
 /* 向上一阶 向下渐隐  */
@@ -143,15 +190,15 @@
 /** animate 常用类 **/
 
 @-webkit-keyframes slideTop{
-    0%{-webkit-transform:translateY(55px);opacity: 0;}
-    100%{-webkit-transform:translateY(0px);opacity: 1;}
-    /*25%,50%{transform:translateY(-30px);opacity: 1;}*/
+    0%{-webkit-transform:translateY(60px); opacity: 0}
+    100%{-webkit-transform:translateY(0); opacity: 1}
 }
-
-
+.an-slideTop{
+   top: 60px;
+}
 .trans .an-slideTop{
-    animation : slideTop 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1s;
-    -webkit-animation : slideTop 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1s ;
+    animation : slideTop 3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.7s ;
+    -webkit-animation : slideTop 3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s ;
 }
 
 
@@ -167,7 +214,7 @@
 
 /** 保持开始帧 **/
 .an-util-backwards{
-    -webkit-animation-fill-mode: forwards  !important;;
+    -webkit-animation-fill-mode: backwards  !important;;
     -moz-animation-fill-mode: backwards;
     -o-animation-fill-mode: backwards;
     animation-fill-mode: backwards;

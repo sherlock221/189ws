@@ -51,12 +51,7 @@ define(function (require, exports, module) {
                 //添加trans
                 var xyList = UI.FixRelative.find(".xy-figure");
                 xyList.removeClass("trans");
-                setTimeout(function(
-                    ){
-                    xyList.filter("[id='figph"+index+"']").addClass("trans");
-
-                },1000);
-
+                var node = xyList.filter("[id='figph"+index+"']").addClass("trans");
                 $this.addClass("active").siblings().removeClass("active");
 
                 Cons.currentIndex = index;
