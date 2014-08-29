@@ -6,7 +6,7 @@
 
 /** 放大 **/
 @keyframes amplify {
-    0%{ transform: scale(0);}
+    0%{   transform: scale(0);}
     100% { transform: scale(1);}
 }
 @-moz-keyframes amplify {
@@ -14,8 +14,8 @@
     100% { transform: scale(1);}
 }
 @-webkit-keyframes amplify {
-    0%{ -webkit-transform: scale(0);}
-    100% { -webkit-transform: scale(1);}
+    0%{ -webkit-transform: scale(0); opacity: 0;}
+    100% { -webkit-transform: scale(1); opacity: 1;}
 }
 @-o-keyframes amplify {
     0%{ -o-transform: scale(0);}
@@ -26,12 +26,13 @@
     100% { -ms-transform: scale(1);}
 }
 
-.an-amplify{
-    animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
-    -webkit-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
-    -moz-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
-    -ms-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
-    -o-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 0.5s;
+.trans .an-amplify{
+    opacity: 0;
+    animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 6s;
+    -webkit-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 5.5s;
+    -moz-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 6s;
+    -ms-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 6s;
+    -o-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 6s;
 }
 
 
@@ -122,33 +123,97 @@
     animation : slidepop 0.8s cubic-bezier(0, .25, .08, 1) 2.8s;
 }
 @keyframes slidepop{
-    0%{transform:translateY(-30px) translateX(-30px);opacity: 0;}
+    0%{transform:translateY(-60px) translateX(-120px);opacity: 0;}
     100%{transform:translateY(0) translateY(0);opacity: 1;}
 }
 
 @-moz-keyframes slidepop{
-    0%{-moz-transform:translateY(-30px) translateX(-30px);opacity: 0;}
+    0%{-moz-transform:translateY(-60px) translateX(-120px);opacity: 0;}
     100%{-moz-transform:translateY(0) translateY(0);opacity: 1;}
 }
 
 @-webkit-keyframes slidepop{
-    0%{-webkit-transform:translateY(-30px) translateX(-30px);opacity: 0;}
+    0%{-webkit-transform:translateY(-60px) translateX(-120px);opacity: 0;}
     100%{-webkit-transform:translateY(0) translateY(0);opacity: 1;}
 }
 
 @-o-keyframes slidepop{
-    0%{-o-transform:translateY(-30px) translateX(-30px);opacity: 0;}
+    0%{-o-transform:translateY(-60px) translateX(-120px);opacity: 0;}
     100%{-o-transform:translateY(0) translateY(0);opacity: 1;}
 }
 @-ms-keyframes slidepop{
-    0%{-ms-transform:translateY(-30px) translateX(-30px);opacity: 0;}
+    0%{-ms-transform:translateY(-60px) translateX(-120px);opacity: 0;}
     100%{-ms-transform:translateY(0) translateY(0);opacity: 1;}
 }
 
 
+/*  飞旋 */
+.trans .an-fly-01{
+    -webkit-animation : fly-01 2s ease-out 0.2s;
+}
+@-webkit-keyframes fly-01{
+    0%{
+        -webkit-transform:translateX(0) translateY(0) ;
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100%{
+        -webkit-transform: translateX(317px) translateY(-112px) rotate(540deg);
+        opacity: 0;
+    }
+}
+
+
+.trans .an-fly-02-fade{
+    opacity: 0;
+    -webkit-animation : fly-fadeIn 0.6s ease-out 1.8s;
+}
+@-webkit-keyframes fly-fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 
 
+
+.trans .an-fly-02{
+    opacity: 0;
+    -webkit-animation : fly-02 2s ease-out 2.6s;
+}
+@-webkit-keyframes fly-02{
+    0%{
+        -webkit-transform:translateX(0) translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100%{
+        -webkit-transform: translateX(402px) translateY(93px) rotate(720deg);
+        opacity: 1;
+    }
+}
+
+
+.trans .an-fly-03{
+    opacity: 0;
+    -webkit-animation : fly-03 2s ease-out 4.4s;
+}
+
+@-webkit-keyframes fly-03{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 
 
@@ -224,3 +289,23 @@
 
 
 
+
+.d3{
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+
+/** 元素卡顿现象 **/
+.backface{
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+}

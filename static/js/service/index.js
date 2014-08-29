@@ -22,8 +22,6 @@ define(function (require, exports, module) {
     var Event = {
 
         init: function () {
-
-
             //自适应高度
             var $targetFig = UI.FixRelative.find(".xy-figure");
             //首次初始化高度
@@ -69,25 +67,25 @@ define(function (require, exports, module) {
 
             });
 
-           //绑定鼠标滚轮事件
-           UI.FixRelative.bind("mousewheel", function(event, delta, deltaX, deltaY) {
-                if (timer) {
-                    window.clearTimeout(timer)
-                }
-               console.log(delta);
-
-                timer = window.setTimeout(function() {
-                    if (delta < 0) {
-                        Cons.currentIndex++;
-                        Cons.currentIndex = currentIndexSlice(Cons.currentIndex);
-                        transformLayer(Cons.currentIndex);
-                    } else {
-                        Cons.currentIndex--;
-                        Cons.currentIndex = currentIndexSlice(Cons.currentIndex);
-                        transformLayer(Cons.currentIndex);
-                    }
-                }, 500)
-            });
+//           //绑定鼠标滚轮事件
+//           UI.FixRelative.bind("mousewheel", function(event, delta, deltaX, deltaY) {
+//                if (timer) {
+//                    window.clearTimeout(timer)
+//                }
+//               console.log(delta);
+//
+//                timer = window.setTimeout(function() {
+//                    if (delta < 0) {
+//                        Cons.currentIndex++;
+//                        Cons.currentIndex = currentIndexSlice(Cons.currentIndex);
+//                        transformLayer(Cons.currentIndex);
+//                    } else {
+//                        Cons.currentIndex--;
+//                        Cons.currentIndex = currentIndexSlice(Cons.currentIndex);
+//                        transformLayer(Cons.currentIndex);
+//                    }
+//                }, 500)
+//            });
         }
 
     };
