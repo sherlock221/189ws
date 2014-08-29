@@ -289,7 +289,7 @@
 
 
 
-
+/* 3D变形会消耗更多的内存与功耗，应确实有性能问题时才去使用它，兼在权衡  */
 .d3{
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);

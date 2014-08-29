@@ -387,3 +387,63 @@
     line-height: 0;
     text-indent: -9999px;
 }
+
+.xy-discover-iphone{
+    background-image: url("../../images/iphone5c.png");
+    width: 200px;
+    height: 417px;
+    z-index: 9;
+
+}
+
+.xy-discover-left{
+    background-image: url("../../images/lefr-zhe.png");
+    width: 136px;
+    height: 330px;
+
+    position: absolute;
+    left: -130px;
+    z-index: 10;
+}
+
+.xy-discover-right{
+    background-image: url("../../images/right-zhe.png");
+    width: 136px;
+    height: 330px;
+
+    position: absolute;
+    right: -130px;
+    z-index: 10;
+}
+
+.xy-discover-img-01{
+    position: absolute;
+    left: 18px;
+    top: 63px;
+    z-index: 10;
+}
+.xy-discover-img-02{
+    position: absolute;
+
+    left: 182px;
+    top: 63px;
+
+    z-index: 8;
+}
+
+.xy-discover-img-03{
+    position: absolute;
+    right: 182px;
+    top: 63px;
+
+    z-index: 8;
+}
+
+.xy-iphone-cor{
+    position: relative;
+    width: 200px;
+    height: 417px;
+
+    right: 70px;
+    top: 97px;
+}
