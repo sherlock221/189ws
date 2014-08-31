@@ -82,30 +82,28 @@
     height: 15px;
     display: inline-block;
     margin-left: 10px;
-    background-position: -15px  0;
+    background-position: -45px  -15px;
 
 }
-.xy-dot.inverse li:after{
-    content: '';
-    background: transparent url("../../images/dot.png") no-repeat;
-    width: 15px;
-    height: 15px;
-    display: inline-block;
-    margin-left: 10px;
-    background-position: -45px  0;
-}
+/*.xy-dot.inverse li:after{*/
+    /*content: '';*/
+    /*background: transparent url("../../images/dot.png") no-repeat;*/
+    /*width: 15px;*/
+    /*height: 15px;*/
+    /*display: inline-block;*/
+    /*margin-left: 10px;*/
+    /*background-position: -45px  0;*/
+/*}*/
 
-.xy-dot.inverse li.active:after{
-
-    background-position:  -30px  0;
-}
-.xy-dot.inverse li {
-    color: #0b6bd5;
-}
+/*.xy-dot.inverse li.active:after{*/
+    /*background-position:  -30px  0;*/
+/*}*/
+/*.xy-dot.inverse li {*/
+    /*color: #0b6bd5;*/
+/*}*/
 .xy-dot li.active:after{
-    background-position: 0  0;
+    background-position: -30px  -15px;
 }
-
 
 .xy-dot li{
     float: right;
@@ -307,7 +305,7 @@
 }
 .xy-rotation-div.third{
     position: relative;
-    top: -60px;
+    top: -148px;
     right: -616px;
 }
 
@@ -352,6 +350,8 @@
    height: 316px;
    position: relative;
    right: 22px;
+
+   bottom: 28px; /** 720 **/
 }
 
 .xy-ip-bg-01{
@@ -379,8 +379,174 @@
     height: 280px;
     position: relative;
     left: -85px; /** 图片进行hack **/
+    top: -20px;
 }
 .xy-discover h2,.xy-discover p {
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+
+
+
+.xy-discover-transform{
+    position: relative;
+    top: 70px;
+    right: 74px;
+}
+.xy-iphone5c{
+    background-image: url("../../images/iphone5c.png");
+    background-color: #2185f3;
+    width: 200px;
+    height: 417px;
+    z-index: 10;
+    position: relative;
+}
+
+.xy-scale{
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -mz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+}
+
+.xy-left-zhe{
+    background-image: url("../../images/lefr-zhe.png");
+    width: 136px;
+    height: 330px;
+
+    position: absolute;
+    left: -140px;
+    top : 60px;
+
+    z-index: 11;
+
+
+}
+.xy-right-zhe{
+    background-image: url("../../images/right-zhe.png");
+    width: 136px;
+    height: 330px;
+
+    position: absolute;
+    right: -140px;
+    top: 60px;
+    /*background: red;*/
+    z-index: 11;
+}
+
+.xy-bg-03-01{
+    background-image: url("../../images/ip-03-01.jpg");
+    width: 167px;
+    height: 294px;
+    position: absolute;
+    top: 63px;
+    left: 18px;
+    z-index: 10;
+}
+
+.xy-bg-03-02{
+    background-image: url("../../images/ip-03-02.jpg");
+    width: 167px;
+    height: 294px;
+
+    position: absolute;
+    top: 63px;
+    left: -130px;
+    z-index: 9;
+
+    opacity: 0.6;
+}
+
+.xy-bg-03-03{
+    background-image: url("../../images/ip-03-03.jpg");
+    width: 167px;
+    height: 294px;
+
+    position: absolute;
+    top: 63px;
+    right: -140px;
+    z-index: 9;
+}
+
+
+/** 生活 **/
+.xy-life-title{
+    background-image: url("../../images/life.jpg");
+    width: 472px;
+    height: 221px;
+
+    position: absolute;
+    left: -54px;
+    /*top: 12px;*/
+}
+
+.xy-life-content{
+position: absolute; width: 100%; top: 203px; height: 270px;
+}
+.xy-life-item{
+    background-image: url("../../images/life-item.png");
+}
+
+.xy-life-small-dou{
+    background-position:  -110px 0px;
+    width: 70px;
+    height: 83px;
+
+    position: absolute;
+    bottom: 0px;
+    left: 141px;
+}
+.xy-life-big-dou{
+    background-position:  0 0;
+    width: 110px;
+    height: 128px;
+
+   margin-left: 50px;
+    margin-right: 100px;
+
+    position: absolute;
+    bottom: 0px;
+    left: 193px;
+}
+.xy-life-ball{
+    background-position:  -180px -113px;
+    width: 222px;
+    height: 187px;
+
+    position: absolute;
+    right: 165px;
+    bottom: -68px;
+
+}
+
+.xy-life-air{
+    background-position: 0px -130px;
+    width: 153px;
+    height: 152px;
+    position: absolute;
+    bottom: 146px;
+    right: 109px;
+
+}
+
+
+.xy-life-bag{
+    background-position:  -402px 0;
+    width: 198px;
+    height: 282px;
+
+    position: absolute;
+    bottom: 0;
+    left: 429px;
+}
+
+
+.xy-life-title h2, .xy-life-title p {
     height: 0;
     overflow: hidden;
     font-size: 0;
