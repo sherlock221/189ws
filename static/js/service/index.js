@@ -42,6 +42,18 @@ define(function (require, exports, module) {
 
         },
         button: function () {
+
+            //图片自动轮播事件
+            var discover = $(".xy-discover-transform");
+
+            var core = 1;
+
+
+
+
+
+
+
             //圆点切换事件
             UI.Dot.on("click", ".xy-dot > li", function () {
                 var $this = $(this);
