@@ -1,6 +1,8 @@
 /**
  * 首页js
  */
+
+
 define(function (require, exports, module) {
 
     require("mouse")($);
@@ -19,9 +21,15 @@ define(function (require, exports, module) {
 
     var timer;
 
+    var isIE;
+
     var Event = {
 
         init: function () {
+
+            //检测浏览器
+            isIE = checkIe9();
+
             //自适应高度
             var $targetFig = UI.FixRelative.find(".xy-figure");
             //首次初始化高度
@@ -45,27 +53,20 @@ define(function (require, exports, module) {
 
             //图片自动轮播事件
             var discover = $(".xy-discover-transform");
-
             var core = 1;
 
 
+            function toggleDot(index){
 
-
-
-
-
-            //圆点切换事件
-            UI.Dot.on("click", ".xy-dot > li", function () {
-                var $this = $(this);
-                var index = $this.attr("tabid");
-                //添加trans
+                //改变效用
                 var xyList = UI.FixRelative.find(".xy-figure");
-                xyList.removeClass("trans");
-                var node = xyList.filter("[id='figph"+index+"']").addClass("trans");
-                $this.addClass("active").siblings().removeClass("active");
+                var node = xyList.filter("[id='figph"+index+"']").addClass("trans").siblings().removeClass("trans");
 
-                Cons.currentIndex = index;
 
+                var dom = UI.DotList.find("[tabid='"+index+"']").addClass("active");
+                dom.siblings().removeClass("active");
+
+                //改变导航背景色
                 setTimeout(function () {
                     //判断是否需要反色
                     if (index == "2" || index == "4")
@@ -73,39 +74,101 @@ define(function (require, exports, module) {
                     else
                         toggleInverse(false);
                 }, 0);
-
                 transformLayer(index);
+            };
 
+            //圆点切换事件
+            UI.Dot.on("click", ".xy-dot > li", function () {
+                var $this = $(this);
+                var index = $this.attr("tabid");
+                Cons.currentIndex = index;
+                toggleDot(index);
+                return false;
+            });
+
+            var isAnimate = false;
+
+           //绑定鼠标滚轮事件
+           UI.FixRelative.bind("mousewheel", function(event, delta, deltaX, deltaY) {
+
+               var $this = $(this),
+                   timeoutId = $this.data('timeoutId');
+               if (timeoutId) {
+                   clearTimeout(timeoutId);
+               }
+               $this.data('timeoutId', setTimeout(function() {
+
+                   console.log(delta);
+
+                   $this.removeData('timeoutId');
+                   $this = null
+
+                   if (delta < 0) {
+                       Cons.currentIndex++;
+                       Cons.currentIndex = currentIndexSlice(Cons.currentIndex);
+
+                   } else {
+                       Cons.currentIndex--;
+                       Cons.currentIndex = currentIndexSlice(Cons.currentIndex);
+                   }
+
+                   toggleDot(Cons.currentIndex);
+
+
+               }, 100));
+               return false;
 
             });
 
-//           //绑定鼠标滚轮事件
-//           UI.FixRelative.bind("mousewheel", function(event, delta, deltaX, deltaY) {
-//                if (timer) {
-//                    window.clearTimeout(timer)
-//                }
-//               console.log(delta);
-//
-//                timer = window.setTimeout(function() {
-//                    if (delta < 0) {
-//                        Cons.currentIndex++;
-//                        Cons.currentIndex = currentIndexSlice(Cons.currentIndex);
-//                        transformLayer(Cons.currentIndex);
-//                    } else {
-//                        Cons.currentIndex--;
-//                        Cons.currentIndex = currentIndexSlice(Cons.currentIndex);
-//                        transformLayer(Cons.currentIndex);
-//                    }
-//                }, 500)
-//            });
+
         }
 
+
+
     };
+
+
+
+
+    //检测ie9下
+    function checkIe9(){
+
+        if(window.navigator.appName == "Microsoft Internet Explorer" && window.navigator.appVersion.match(/7./i)=="7.")
+        {
+            return  2;
+        }
+        else if(window.navigator.appName == "Microsoft Internet Explorer" && window.navigator.appVersion.match(/8./i)=="8.")
+        {
+            return  1;
+        }
+        else if(window.navigator.appName == "Microsoft Internet Explorer" && window.navigator.appVersion.match(/9./i)=="9.")
+        {
+            return  1;
+        }
+        else if(window.navigator.appName == "Microsoft Internet Explorer")
+        {
+            return  2;
+        }
+        else{
+            return 0;
+        }
+    };
+
+
 
     //竖向滑动层
     function transformLayer(index) {
         var height = Cons.LayerHeight * index;
-        UI.FixRelative.css("transform", "translate(0px, -" + height + "px)");
+
+        if(isIE == 0){
+            //webkit moz
+            UI.FixRelative.css("transform", "translate(0px, -" + height + "px)");
+        }
+        else{
+            //ie8 9
+            $('html,body').animate({scrollTop: height+'px'}, 800);
+        }
+
     }
 
     //反向颜色

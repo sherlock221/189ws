@@ -73,8 +73,8 @@ nav.xy-nav {
     position: relative;
     top: 14px;
     cursor: pointer;
-
 }
+
 
 /* 导航内容 */
 .xy-nav .xy-nav-main{
@@ -95,6 +95,13 @@ nav.xy-nav {
 }
 
 
+
+.xy-nav .xy-nav-main  li>a:hover{
+    color: #74adeb;
+}
+.xy-nav .xy-nav-main  li.active > a{
+    color: #3487e0;
+}
 
 
 

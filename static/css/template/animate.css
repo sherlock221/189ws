@@ -6,33 +6,38 @@
 
 /** 放大 **/
 @keyframes amplify {
-    0%{   transform: scale(0);}
-    100% { transform: scale(1);}
+    0%{   transform: scale(0); opacity: 0;}
+    100% { transform: scale(1); opacity: 1;}
 }
 @-moz-keyframes amplify {
-    0%{ transform: scale(0);}
-    100% { transform: scale(1);}
+    0%{   transform: scale(0); opacity: 0;}
+    100% { transform: scale(1); opacity: 1;}
 }
 @-webkit-keyframes amplify {
     0%{ -webkit-transform: scale(0); opacity: 0;}
     100% { -webkit-transform: scale(1); opacity: 1;}
 }
 @-o-keyframes amplify {
-    0%{ -o-transform: scale(0);}
-    100% { -o-transform: scale(1);}
+    0%{   transform: scale(0); opacity: 0;}
+    100% { transform: scale(1); opacity: 1;}
 }
 @-ms-keyframes amplify{
-    0%{ -ms-transform: scale(0);}
-    100% { -ms-transform: scale(1);}
+    0%{   transform: scale(0); opacity: 0;}
+    100% { transform: scale(1); opacity: 1;}
 }
 
 .trans .an-amplify{
-    opacity: 0;
-    animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 6s;
-    -webkit-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 5.5s;
-    -moz-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 6s;
-    -ms-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 6s;
-    -o-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 6s;
+    animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 2.8s;
+    -webkit-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 2.8s;
+    -moz-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 2.8s;
+    -ms-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 2.8s;;
+    -o-animation : amplify 0.6s cubic-bezier(0, .25, .08, 1) 2.8s;
+
+
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 
@@ -70,37 +75,37 @@
 
 
 
-/* 向上一阶  向下二段渐隐  */
+/* 向上一阶  向下一段段渐隐  */
 @keyframes thiAni{
     0%{-webkit-transform:translateY(0);opacity: 0;}
-    25%{-webkit-transform:translateY(-60px);opacity: 1;}
+    /*25%{-webkit-transform:translateY(-60px);opacity: 1;}*/
     50%{-webkit-transform:translateY(-30px);opacity: 1;}
     100%{opacity: 1;}
 }
 
 @-moz-keyframes thiAni{
     0%{-webkit-transform:translateY(0);opacity: 0;}
-    25%{-webkit-transform:translateY(-60px);opacity: 1;}
+    /*25%{-webkit-transform:translateY(-60px);opacity: 1;}*/
     50%{-webkit-transform:translateY(-30px);opacity: 1;}
     100%{opacity: 1;}
 }
 
 @-webkit-keyframes thiAni{
     0%{-webkit-transform:translateY(0);opacity: 0;}
-    25%{-webkit-transform:translateY(-60px);opacity: 1;}
+    /*25%{-webkit-transform:translateY(-60px);opacity: 1;}*/
     50%{-webkit-transform:translateY(-30px);opacity: 1;}
     100%{opacity: 1;}
 }
 
 @-o-keyframes thiAni{
     0%{-webkit-transform:translateY(0);opacity: 0;}
-    25%{-webkit-transform:translateY(-60px);opacity: 1;}
+    /*25%{-webkit-transform:translateY(-60px);opacity: 1;}*/
     50%{-webkit-transform:translateY(-30px);opacity: 1;}
     100%{opacity: 1;}
 }
 @-ms-keyframes thiAni{
     0%{-webkit-transform:translateY(0);opacity: 0;}
-    25%{-webkit-transform:translateY(-60px);opacity: 1;}
+    /*25%{-webkit-transform:translateY(-60px);opacity: 1;}*/
     50%{-webkit-transform:translateY(-30px);opacity: 1;}
     100%{opacity: 1;}
 }
@@ -149,7 +154,7 @@
 
 /*  飞旋 */
 .trans .an-fly-01{
-    -webkit-animation : fly-01 2s linear 0.2s;
+    -webkit-animation : fly-01 1.3s linear 0.2s;
 }
 @-webkit-keyframes fly-01{
     0%{
@@ -161,7 +166,7 @@
         opacity: 1;
     }
     100%{
-        -webkit-transform: translateX(317px) translateY(-112px) rotate(720deg) scale(1.6);
+        -webkit-transform: translateX(317px) translateY(-112px) rotate(560deg) scale(1.6);
         opacity: 0;
     }
 }
@@ -169,7 +174,7 @@
 
 .trans .an-fly-02-fade{
     opacity: 0;
-    -webkit-animation : fly-fadeIn 0.8s ease-out 2s;
+    -webkit-animation : fly-fadeIn 0.8s ease-out 1.6s;
 }
 @-webkit-keyframes fly-fadeIn{
     0%{
@@ -185,7 +190,7 @@
 
 .trans .an-fly-02{
     opacity: 0;
-    -webkit-animation : fly-02 2s linear 2.6s;
+    -webkit-animation : fly-02 1.4s linear 2.6s;
 }
 @-webkit-keyframes fly-02{
     0%{
@@ -196,7 +201,7 @@
         opacity: 1;
     }
     100%{
-        -webkit-transform:translateX(414px) translateY(-39px) rotate(720deg);
+        -webkit-transform:translateX(414px) translateY(-39px) rotate(560deg);
         opacity: 1;
     }
 }
@@ -262,9 +267,77 @@
     }
 
     50% {
+
+
         opacity: 1
     }
 }
+
+
+
+
+@-webkit-keyframes rollin {
+    0% { opacity: 0; -webkit-transform: translatex(-100%) rotate(-120deg); }
+    100% { opacity: 1; -webkit-transform: translatex(0px) rotate(0deg); }
+}
+
+@-moz-keyframes rollin {
+    0% { opacity: 0; -moz-transform: translatex(-100%) rotate(-120deg); }
+    100% { opacity: 1; -moz-transform: translatex(0px) rotate(0deg); }
+}
+
+@-o-keyframes rollin {
+    0% { opacity: 0; -o-transform: translatex(-100%) rotate(-120deg); }
+    100% { opacity: 1; -o-transform: translatex(0px) rotate(0deg); }
+}
+
+@keyframes rollin {
+    0% { opacity: 0; transform: translatex(-100%) rotate(-120deg); }
+    100% { opacity: 1; transform: translatex(0px) rotate(0deg); }
+}
+
+.trans .rollin {
+    -webkit-animation-name: rollin;
+    -moz-animation-name: rollin;
+    -o-animation-name: rollin;
+    animation-name: rollin;
+
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+}
+
+.trans .rollin.delay01{
+    -webkit-animation-delay :  0.6s;
+    -moz-animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+
+.trans .rollin.delay02{
+    -webkit-animation-delay :  1.0s;
+    -moz-animation-delay: 1.0s;
+    -o-animation-delay: 1.0s;
+    animation-delay: 1.0s;
+}
+
+
+.trans .rollin.delay03{
+    -webkit-animation-delay :  1.8s;
+    -moz-animation-delay: 1.8s;
+    -o-animation-delay: 1.8s;
+    animation-delay: 1.8s;
+}
+
+
 
 
 
