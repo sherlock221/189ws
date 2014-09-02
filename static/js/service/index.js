@@ -11,7 +11,9 @@ define(function (require, exports, module) {
         FixRelative: $("#xy-fixrelative"),
         Dot: $("#xy-dot-main"),
         DotList: $("#xy-dot"),
-        Header: $("#xy-header")
+        Header: $("#xy-header"),
+        collapsenNav : $("#collapsedNav"),
+        NavList   :  $(".xy-nav-main")
     };
 
     var Cons = {
@@ -26,7 +28,6 @@ define(function (require, exports, module) {
     var Event = {
 
         init: function () {
-
             //检测浏览器
             isIE = checkIe9();
 
@@ -55,6 +56,21 @@ define(function (require, exports, module) {
             var discover = $(".xy-discover-transform");
             var core = 1;
 
+
+            //导航条展开按钮
+            UI.collapsenNav.bind("click",function(){
+                var $this = $(this);
+                var status = $this.attr("status");
+                if(status == '0'){
+                    UI.NavList.show();
+                    status = 1;
+                }
+                else{
+                    UI.NavList.hide();
+                    status =0;
+                }
+                $this.attr("status",status);
+            });
 
             function toggleDot(index){
                 //改变效用
