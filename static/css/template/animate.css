@@ -79,34 +79,34 @@
 @keyframes thiAni{
     0%{-webkit-transform:translateY(0);opacity: 0;}
     /*25%{-webkit-transform:translateY(-60px);opacity: 1;}*/
-    50%{-webkit-transform:translateY(-30px);opacity: 1;}
+    50%{-webkit-transform:translateY(-60px);opacity: 1;}
     100%{opacity: 1;}
 }
 
 @-moz-keyframes thiAni{
     0%{-webkit-transform:translateY(0);opacity: 0;}
     /*25%{-webkit-transform:translateY(-60px);opacity: 1;}*/
-    50%{-webkit-transform:translateY(-30px);opacity: 1;}
+    50%{-webkit-transform:translateY(-60px);opacity: 1;}
     100%{opacity: 1;}
 }
 
 @-webkit-keyframes thiAni{
     0%{-webkit-transform:translateY(0);opacity: 0;}
     /*25%{-webkit-transform:translateY(-60px);opacity: 1;}*/
-    50%{-webkit-transform:translateY(-30px);opacity: 1;}
+    50%{-webkit-transform:translateY(-60px);opacity: 1;}
     100%{opacity: 1;}
 }
 
 @-o-keyframes thiAni{
     0%{-webkit-transform:translateY(0);opacity: 0;}
     /*25%{-webkit-transform:translateY(-60px);opacity: 1;}*/
-    50%{-webkit-transform:translateY(-30px);opacity: 1;}
+    50%{-webkit-transform:translateY(-60px);opacity: 1;}
     100%{opacity: 1;}
 }
 @-ms-keyframes thiAni{
     0%{-webkit-transform:translateY(0);opacity: 0;}
     /*25%{-webkit-transform:translateY(-60px);opacity: 1;}*/
-    50%{-webkit-transform:translateY(-30px);opacity: 1;}
+    50%{-webkit-transform:translateY(-60px);opacity: 1;}
     100%{opacity: 1;}
 }
 
@@ -151,84 +151,18 @@
     100%{-ms-transform:translateY(0) translateY(0);opacity: 1;}
 }
 
-
-/*  飞旋 */
-.trans .an-fly-01{
-    -webkit-animation : fly-01 1.3s linear 0.2s;
-}
-@-webkit-keyframes fly-01{
-    0%{
-        -webkit-transform:translateX(0) translateY(0) scale(1) ;
-        opacity: 1;
-    }
-
-    60% {
-        opacity: 1;
-    }
-    100%{
-        -webkit-transform: translateX(317px) translateY(-112px) rotate(560deg) scale(1.6);
-        opacity: 0;
-    }
-}
-
-
-.trans .an-fly-02-fade{
-    opacity: 0;
-    -webkit-animation : fly-fadeIn 0.8s ease-out 1.6s;
-}
-@-webkit-keyframes fly-fadeIn{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-
-
-
-.trans .an-fly-02{
-    opacity: 0;
-    -webkit-animation : fly-02 1.4s linear 2.6s;
-}
-@-webkit-keyframes fly-02{
-    0%{
-        -webkit-transform:translateX(0) translateY(0) rotate(0deg);
-        opacity: 0;
-    }
-    30% {
-        opacity: 1;
-    }
-    100%{
-        -webkit-transform:translateX(414px) translateY(-39px) rotate(560deg);
-        opacity: 1;
-    }
-}
-
-
-.trans .an-fly-03{
-    opacity: 0;
-    -webkit-animation : fly-03 2s ease-out 4.4s;
-}
-
-@-webkit-keyframes fly-03{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-
-
 .trans .an-zoomIn {
 
     -webkit-animation : zoomIn 0.8s  0.8s ;
     animation : zoomIn 0.8s  0.8s ;
+    -moz-animation : zoomIn 0.8s  0.8s ;
+    -ms-animation : zoomIn 0.8s  0.8s ;
+    -o-animation :  zoomIn 0.8s  0.8s ;
 
     -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
     animation-fill-mode: both
 }
 
@@ -237,7 +171,16 @@
     -webkit-animation : zoomIn 0.8s  1.6s ;
     animation : zoomIn 0.8s  1.6s;
 
+    -webkit-animation :zoomIn 0.8s  1.6s ;
+    animation : zoomIn 0.8s  1.6s ;
+    -moz-animation :zoomIn 0.8s  1.6s ;
+    -ms-animation :zoomIn 0.8s  1.6s ;
+    -o-animation : zoomIn 0.8s  1.6s ;
+
     -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
     animation-fill-mode: both
 }
 
@@ -246,15 +189,10 @@
         opacity: 0;
         -webkit-transform: scale3d(.3,.3,.3);
         transform: scale3d(.3,.3,.3)
-
 }
 
     50% {
-
-
         opacity: 1
-
-
     }
 }
 
@@ -272,7 +210,32 @@
         opacity: 1
     }
 }
+@-moz-keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3,.3,.3);
+        -moz-transform: scale3d(.3,.3,.3);
+        transform: scale3d(.3,.3,.3)
+    }
 
+    50% {
+
+
+        opacity: 1
+    }
+}
+
+@-o-keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -o-transform: scale3d(.3,.3,.3);
+        transform: scale3d(.3,.3,.3)
+    }
+
+    50% {
+        opacity: 1
+    }
+}
 
 
 
