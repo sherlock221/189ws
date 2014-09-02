@@ -57,11 +57,9 @@ define(function (require, exports, module) {
 
 
             function toggleDot(index){
-
                 //改变效用
                 var xyList = UI.FixRelative.find(".xy-figure");
                 var node = xyList.filter("[id='figph"+index+"']").addClass("trans").siblings().removeClass("trans");
-
 
                 var dom = UI.DotList.find("[tabid='"+index+"']").addClass("active");
                 dom.siblings().removeClass("active");
@@ -78,12 +76,13 @@ define(function (require, exports, module) {
             };
 
             //圆点切换事件
-            UI.Dot.on("click", ".xy-dot > li", function () {
+            UI.Dot.on("click", ".xy-dot li", function () {
+                console.log("....");
                 var $this = $(this);
                 var index = $this.attr("tabid");
+                console.log(index);
                 Cons.currentIndex = index;
                 toggleDot(index);
-                return false;
             });
 
             var isAnimate = false;

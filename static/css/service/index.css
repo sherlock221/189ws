@@ -75,16 +75,32 @@
 }
 
 
-.xy-dot li:after{
-    content: '';
+/** ie8 存在兼容性问题 查询解决 **/
+/*.xy-dot li:after{*/
+    /*content: '';*/
+    /*background: transparent url("../../images/dot.png") no-repeat;*/
+    /*width: 15px;*/
+    /*height: 15px;*/
+    /*display: inline-block;*/
+    /*margin-left: 10px;*/
+    /*background-position: -45px  -15px;*/
+
+/*}*/
+
+
+.xy-dot li > .xy-dot-icon{
     background: transparent url("../../images/dot.png") no-repeat;
     width: 15px;
     height: 15px;
     display: inline-block;
     margin-left: 10px;
     background-position: -45px  -15px;
-
 }
+
+.xy-dot li.active > .xy-dot-icon{
+    background-position: -30px  -15px;
+}
+
 /*.xy-dot.inverse li:after{*/
     /*content: '';*/
     /*background: transparent url("../../images/dot.png") no-repeat;*/
@@ -101,9 +117,9 @@
 /*.xy-dot.inverse li {*/
     /*color: #0b6bd5;*/
 /*}*/
-.xy-dot li.active:after{
-    background-position: -30px  -15px;
-}
+/*.xy-dot li.active:after{*/
+    /*background-position: -30px  -15px;*/
+/*}*/
 
 .xy-dot li{
     float: right;
