@@ -26,9 +26,6 @@
     <link href="../static/css/template/normalize.css" rel="stylesheet" type="text/css"/>
 
 
-    <!-- seajs -->
-    <script type="text/javascript" src="../static/js/sea-modules/seajs/2.3.0/dist/sea.js"></script>
-    <script type="text/javascript" src="../static/js/sea-modules/seajs_config.js"></script>
 
     <!--template css  -->
     <link href="../static/css/template/template-mobile.css" rel="stylesheet" type="text/css"/>
@@ -40,7 +37,9 @@
     <link href="../static/css/service/mobile.css" rel="stylesheet" type="text/css"/>
 
 
+    <script type="text/javascript" src="../static/js/zeptro/1.0.0/zepto.js"></script>
 
+    <script type="text/javascript" src="../static/js/zeptro/zTouch.js"></script>
 
 </head>
 <body>
@@ -54,31 +53,30 @@
 
 <section class="content">
 
-        <ul class="screen-all">
+        <ul class="screen-all" id="screen-all">
 
-            <!-- 1 -->
-            <!--<li class="screen trans"  id="screen01">-->
-                <!--<div class="main">-->
-                        <!--<p class="screen01-text bounceInDown an-util-both">-->
-                            <!--<h3 class="version hidden-val">4.0</h3>-->
-                            <!--<p class="title hidden-val">只为给你一个简单的校园</p>-->
-                        <!--</p>-->
-                    <!--<button class="btn btn-dowload bounceIn an-util-both" type="button"><i class="ib  arrowDown icon-dowload icon "></i>Download</button>-->
-                    <!--<div class="bottom-all">-->
-                        <!--<div class="text-center">-->
-                            <!--<i class="ib logo all-img "></i>-->
-                        <!--</div>-->
-                        <!--<div class="text-center ">-->
-                            <!--<i class="ib logo-title all-img  "></i>-->
-                        <!--</div>-->
-                    <!--</div>-->
+            <li class="screen trans"  id="screen01">
+                <div class="main">
+                        <p class="screen01-text bounceInDown an-util-both">
+                            <h3 class="version hidden-val">4.0</h3>
+                            <p class="title hidden-val">只为给你一个简单的校园</p>
+                        </p>
+                    <button class="btn btn-dowload bounceIn an-util-both" type="button"><i class="ib  arrowDown icon-dowload icon "></i>Download</button>
+                    <div class="bottom-all">
+                        <div class="text-center">
+                            <i class="ib logo all-img "></i>
+                        </div>
+                        <div class="text-center ">
+                            <i class="ib logo-title all-img  "></i>
+                        </div>
+                    </div>
 
 
-                    <!--<div class="arrow">-->
-                        <!--<i class="ib icon icon-arrow  arrowUp"></i>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</li>-->
+                    <div class="arrow">
+                        <i class="ib icon icon-arrow  arrowUp"></i>
+                    </div>
+                </div>
+            </li>
 
 
             <li class="trans screen" id="screen02">
@@ -123,9 +121,6 @@
 
 </body>
 
-<script type="text/javascript">
-    seajs.use("template/template", function () {
+<script type="text/javascript" src="../static/js/service/mobile.js"></script>
 
-    });
-</script>
 </html>

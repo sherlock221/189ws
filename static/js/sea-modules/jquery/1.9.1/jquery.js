@@ -10,7 +10,7 @@
  * http://jquery.org/license
  *
  * Date: 2013-2-4
- */
+ */define(function(require, exports, module) {
 define(function(require, exports, module) {
 (function( window, undefined ) {
 
