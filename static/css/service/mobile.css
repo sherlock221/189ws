@@ -51,10 +51,10 @@
 
     position: absolute;
     left: 50%;
-    bottom: 12%;
+    top : 50%;
+    margin-top : -32.5px;
     margin-left : -92px;
 }
-
 
 
 .hidden-val {
@@ -186,368 +186,51 @@
 
 /** 动画部分 **/
 
-
-.trans .inverse_arrow{
-    -webkit-animation: inverse_arrow 1.2s ease-in 0s infinite;
-    -moz-animation: inverse_arrow 1.2s ease-in 0s infinite;
-    -ms-animation: inverse_arrow 1.2s ease-in 0s infinite;
-    animation: inverse_arrow 1.2s ease-in 0s infinite
+.trans .arrowDown{
+    -webkit-animation: arrowDown 1.2s ease-in 0s infinite;
+    -moz-animation: arrowDown 1.2s ease-in 0s infinite;
+    -ms-animation: arrowDown 1.2s ease-in 0s infinite;
+    animation: arrowDown 1.2s ease-in 0s infinite
 }
 
-@-webkit-keyframes inverse_arrow {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(0);
-        transform: translateY(0)
-
-    }
-    40% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        -webkit-transform: translateY(5px);
-        transform: translateY(5px)
-
-    }
+.trans .arrowUp{
+    -webkit-animation: arrowUp 1.2s ease-in 0s infinite;
+    -moz-animation: arrowUp 1.2s ease-in 0s infinite;
+    -ms-animation: arrowUp 1.2s ease-in 0s infinite;
+    animation: arrowUp 1.2s ease-in 0s infinite
 }
 
-@-moz-keyframes inverse_arrow {
-    0% {
-        opacity: 0;
-        -moz-transform: translateY(0);
-        transform: translateY(0)
-
-    }
-    40% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        -moz-transform: translateY(5px);
-        transform: translateY(5px)
-
-    }
+.trans .bounceInDown{
+    -webkit-animation: bounceInDown 0.6s linear 0s;
+    -moz-animation: bounceInDown 0.6s linear 0s ;
+    -ms-animation: bounceInDown 0.6s linear 0s ;
+    animation: bounceInDown 0.6s linear 0s ;
 }
 
-@-ms-keyframes inverse_arrow {
-    0% {
-        opacity: 0;
-        -ms-transform: translateY(0);
-        transform: translateY(0)
-
-    }
-    40% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        -ms-transform: translateY(5px);
-        transform: translateY(5px)
-
-    }
-}
-
-@keyframes inverse_arrow {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(10px);
-        transform: translateY(10px)
-    }
-    40% {
-        opacity: 1;
-        -webkit-transform: translateY(4px);
-        transform: translateY(4px)
-    }
-    100% {
-        opacity: 0;
-        -webkit-transform: translateY(-4px);
-        transform: translateY(-4px)
-    }
-}
-
-
-
-.trans .ani_arrow{
-    -webkit-animation: ani_arrow 1.2s ease-in 0s infinite;
-    -moz-animation: ani_arrow 1.2s ease-in 0s infinite;
-    -ms-animation: ani_arrow 1.2s ease-in 0s infinite;
-    animation: ani_arrow 1.2s ease-in 0s infinite
-}
-
-
-@-webkit-keyframes ani_arrow {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(10px);
-        transform: translateY(10px)
-    }
-    40% {
-        opacity: 1;
-        -webkit-transform: translateY(4px);
-        transform: translateY(4px)
-    }
-    100% {
-        opacity: 0;
-        -webkit-transform: translateY(-4px);
-        transform: translateY(-4px)
-    }
-}
-
-@-moz-keyframes ani_arrow {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(10px);
-        transform: translateY(10px)
-    }
-    40% {
-        opacity: 1;
-        -webkit-transform: translateY(4px);
-        transform: translateY(4px)
-    }
-    100% {
-        opacity: 0;
-        -webkit-transform: translateY(-4px);
-        transform: translateY(-4px)
-    }
-}
-
-@-ms-keyframes ani_arrow {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(10px);
-        transform: translateY(10px)
-    }
-    40% {
-        opacity: 1;
-        -webkit-transform: translateY(4px);
-        transform: translateY(4px)
-    }
-    100% {
-        opacity: 0;
-        -webkit-transform: translateY(-4px);
-        transform: translateY(-4px)
-    }
-}
-
-@keyframes ani_arrow {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(10px);
-        transform: translateY(10px)
-    }
-    40% {
-        opacity: 1;
-        -webkit-transform: translateY(4px);
-        transform: translateY(4px)
-    }
-    100% {
-        opacity: 0;
-        -webkit-transform: translateY(-4px);
-        transform: translateY(-4px)
-    }
-}
-
-
-/**  bounceIn 反跳  **/
-
-.trans .an-enterUpBounce{
-    -webkit-animation: enterUpBounce 0.6s linear 0s;
-    -moz-animation: enterUpBounce 0.6s linear 0s ;
-    -ms-animation: enterUpBounce 0.6s linear 0s ;
-    animation: enterUpBounce 0.6s linear 0s ;
-}
-
-.trans .an-bounceIn{
+.trans .bounceIn{
     -webkit-animation: bounceIn 0.3s linear 1s ;
     -moz-animation: bounceIn 0.3s linear 1s ;
     -ms-animation: bounceIn 0.3s linear 1s ;
     animation: bounceIn 0.3s linear 1s ;
 }
 
-.trans .an-bounceIn-02{
+.trans .bounceIn-02{
     -webkit-animation: bounceIn 0.3s ease-in 1.5s;
     -moz-animation: bounceIn 0.3s ease-in 1.5s;
     -ms-animation: bounceIn 0.3s ease-in 1.5s;
     animation: bounceIn 0.3s ease-in 1.5s;
 }
 
-@-webkit-keyframes enterUpBounce {
-    0% {
-        -webkit-transform: translateY(-220px);
-        opacity: 0
-    }
-    50% {
-        -webkit-transform: translateY(0px)
-    }
-    70% {
-        -webkit-transform: translateY(-20px)
-    }
-    100% {
-        -webkit-transform: translateY(0);
-        opacity: 1
-    }
+.trans .bounceInLeft{
+    -webkit-animation: bounceInLeft 0.6s  0.5s;
+    -moz-animation: bounceInLeft 0.3s ease-in 1.5s;
+    -ms-animation: bounceInLeft 0.3s ease-in 1.5s;
+    animation: bounceInLeft 0.3s ease-in 1.5s;
 }
 
-@-moz-keyframes enterUpBounce {
-    0% {
-        -webkit-transform: translateY(-220px);
-        opacity: 0
-    }
-    50% {
-        -webkit-transform: translateY(0px)
-    }
-    70% {
-        -webkit-transform: translateY(-20px)
-    }
-    100% {
-        -webkit-transform: translateY(0);
-        opacity: 1
-    }
-}
-
-@-ms-keyframes enterUpBounce {
-    0% {
-        -webkit-transform: translateY(-220px);
-        opacity: 0
-    }
-    50% {
-        -webkit-transform: translateY(0px)
-    }
-    70% {
-        -webkit-transform: translateY(-20px)
-    }
-    100% {
-        -webkit-transform: translateY(0);
-        opacity: 1
-    }
-}
-
-@keyframes enterUpBounce {
-    0% {
-        -webkit-transform: translateY(-220px);
-        opacity: 0
-    }
-    50% {
-        -webkit-transform: translateY(0px)
-    }
-    70% {
-        -webkit-transform: translateY(-20px)
-    }
-    100% {
-        -webkit-transform: translateY(0);
-        opacity: 1
-    }
-}
-
-
-@-webkit-keyframes bounceIn {
-    0% {
-        opacity: 0;
-        -webkit-transform: scale(2.3);
-        -ms-transform: scale(2.3);
-        transform: scale(2.3)
-    }
-    50% {
-        opacity: 1;
-        -webkit-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-        transform: scale(1.05)
-    }
-    70% {
-        -webkit-transform: scale(0.9);
-        -ms-transform: scale(0.9);
-        transform: scale(0.9)
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1)
-    }
-}
-
-@-moz-keyframes bounceIn {
-    0% {
-        opacity: 0;
-        -webkit-transform: scale(2.3);
-        -ms-transform: scale(2.3);
-        transform: scale(2.3)
-    }
-    50% {
-        opacity: 1;
-        -webkit-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-        transform: scale(1.05)
-    }
-    70% {
-        -webkit-transform: scale(0.9);
-        -ms-transform: scale(0.9);
-        transform: scale(0.9)
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1)
-    }
-}
-
-@-ms-keyframes bounceIn {
-    0% {
-        opacity: 0;
-        -webkit-transform: scale(2.3);
-        -ms-transform: scale(2.3);
-        transform: scale(2.3)
-    }
-    50% {
-        opacity: 1;
-        -webkit-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-        transform: scale(1.05)
-    }
-    70% {
-        -webkit-transform: scale(0.9);
-        -ms-transform: scale(0.9);
-        transform: scale(0.9)
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1)
-    }
-}
-
-@keyframes bounceIn {
-    0% {
-        opacity: 0;
-        -webkit-transform: scale(2.3);
-        -ms-transform: scale(2.3);
-        transform: scale(2.3)
-    }
-    50% {
-        opacity: 1;
-        -webkit-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-        transform: scale(1.05)
-    }
-    70% {
-        -webkit-transform: scale(0.9);
-        -ms-transform: scale(0.9);
-        transform: scale(0.9)
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1)
-    }
-}
 
 /** 动画常用 **/
-
-
+pc
 /** 保持结束帧 **/
 .an-util-forwards{
     -webkit-animation-fill-mode: forwards !important;
