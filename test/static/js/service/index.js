@@ -18,8 +18,7 @@ define(function (require, exports, module) {
 
     var Cons = {
         LayerHeight: 720,
-        currentIndex : 0,
-        lastIndex   : 0
+        currentIndex : 0
     };
 
     var timer;
@@ -34,11 +33,6 @@ define(function (require, exports, module) {
 
             //自适应高度
             var $targetFig = UI.FixRelative.find(".xy-figure");
-
-            //获得最后一个列表id
-            Cons.lastIndex = 4;
-
-
             //首次初始化高度
             var winh = $(window).height();
             Cons.LayerHeight = winh > 720 ? winh : 720;
@@ -178,12 +172,8 @@ define(function (require, exports, module) {
 
 
     //竖向滑动层
-    function transformLayer(index,dir) {
-
-
+    function transformLayer(index) {
         var height = Cons.LayerHeight * index;
-        console.log(index);
-
 
         if(isIE == 0){
             //webkit moz

@@ -373,7 +373,7 @@
    position: relative;
    right: 22px;
 
-   bottom: 48px; /** 720 **/
+   bottom: 28px; /** 720 **/
 }
 
 .xy-ip-bg-01{
@@ -416,7 +416,7 @@
 
 .xy-discover-transform{
     position: relative;
-    top: 50px;
+    top: 70px;
     right: 74px;
 }
 .xy-iphone5c{
@@ -579,9 +579,6 @@ position: absolute; width: 100%; top: 203px; height: 270px;
 .xy-navbar-toggle{
     display: none;
 }
-
-
-
 
 /** <1000 css **/
 

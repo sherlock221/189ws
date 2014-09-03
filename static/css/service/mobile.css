@@ -1,0 +1,598 @@
+/**
+ * @description 手机官网css
+ * @author   sherlock
+ * @time     1：20
+ */
+
+
+/** 整体屏幕 **/
+.screen-all{
+    height: inherit;
+}
+
+
+.screen{
+    position: relative;
+    overflow: hidden;
+
+    height: 100%;
+}
+.screen .main{
+    height: inherit;
+}
+
+#screen01{
+    background: #0e79ef;
+}
+
+
+
+/** 每屏幕文字部分 **/
+
+.screen01-text{
+    background-image: url("../../images/mobile/screen-01-text.png");
+    background-size: 255px 120px;
+    background-repeat: no-repeat;
+    width: 255px;
+    height: 120px;
+
+    position: relative;
+    left: 50%;
+    top: 6%;
+    margin-left : -127px;
+}
+
+.screen02-text{
+    background-image: url("../../images/mobile/screen-02-text.png");
+    background-size: 182.5px  65px;
+    background-repeat: no-repeat;
+    width: 182.5px;
+    height: 65px;
+
+    position: absolute;
+    left: 50%;
+    bottom: 12%;
+    margin-left : -92px;
+}
+
+
+
+.hidden-val {
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+
+
+
+.icon{
+    background-image: url("../../images/mobile/icon.png");
+    background-size: 64px  64px;
+
+
+}
+
+.icon-dowload{
+    width: 16px;
+    height: 16px;
+    background-position:  0 0;
+
+    position: relative;
+    top: 2px;
+    margin-right: 4px;
+}
+
+.icon-arrow{
+    width: 16px;
+    height: 16px;
+    background-position:  -16px 0;
+}
+
+
+.btn{
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    background: none;
+    border-radius: 3px;
+}
+.btn-dowload{
+    width: 125px;
+    border: 1px solid #ffffff;
+    position: absolute;
+    left: 50%;
+    margin-left: -67.5px;
+
+    padding: 4.5px 0;
+    font-size: 15px;
+    margin-top: -10px;
+    top: 50%;
+
+
+}
+
+
+.arrow{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -8px;
+}
+
+
+/** 2x图片 **/
+.all-img{
+    background-image: url("../../images/mobile/all.png");
+    background-size: 300px 400px;
+    background-repeat: no-repeat;
+}
+
+
+
+.logo{
+    background-position:  0 0;
+    width: 43px;
+    height: 35px;
+}
+.logo-title{
+    background-position: 0 -35px;
+    width:  61px;
+    height: 31px;
+}
+.bottom-all{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -28px;
+}
+
+
+/** 屏幕背景 **/
+.top-screen{
+    height: 68%;
+}
+
+.bottom-screen{
+    height:  32%;
+}
+
+
+#screen02 .top-screen{
+    background: #0fd1c1;
+    position: relative;
+}
+
+#screen02 .bottom-screen{
+    background: #e57113;
+    position: relative;
+}
+
+
+
+
+
+.iphone-mobile{
+    background-position: -139px -91px;
+    width: 161px;
+    height: 218px;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    margin-left: -80.5px;
+}
+
+
+/** 动画部分 **/
+
+
+.trans .inverse_arrow{
+    -webkit-animation: inverse_arrow 1.2s ease-in 0s infinite;
+    -moz-animation: inverse_arrow 1.2s ease-in 0s infinite;
+    -ms-animation: inverse_arrow 1.2s ease-in 0s infinite;
+    animation: inverse_arrow 1.2s ease-in 0s infinite
+}
+
+@-webkit-keyframes inverse_arrow {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px)
+
+    }
+}
+
+@-moz-keyframes inverse_arrow {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(0);
+        transform: translateY(0)
+
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -moz-transform: translateY(5px);
+        transform: translateY(5px)
+
+    }
+}
+
+@-ms-keyframes inverse_arrow {
+    0% {
+        opacity: 0;
+        -ms-transform: translateY(0);
+        transform: translateY(0)
+
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -ms-transform: translateY(5px);
+        transform: translateY(5px)
+
+    }
+}
+
+@keyframes inverse_arrow {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px)
+    }
+    40% {
+        opacity: 1;
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px)
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px)
+    }
+}
+
+
+
+.trans .ani_arrow{
+    -webkit-animation: ani_arrow 1.2s ease-in 0s infinite;
+    -moz-animation: ani_arrow 1.2s ease-in 0s infinite;
+    -ms-animation: ani_arrow 1.2s ease-in 0s infinite;
+    animation: ani_arrow 1.2s ease-in 0s infinite
+}
+
+
+@-webkit-keyframes ani_arrow {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px)
+    }
+    40% {
+        opacity: 1;
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px)
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px)
+    }
+}
+
+@-moz-keyframes ani_arrow {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px)
+    }
+    40% {
+        opacity: 1;
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px)
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px)
+    }
+}
+
+@-ms-keyframes ani_arrow {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px)
+    }
+    40% {
+        opacity: 1;
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px)
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px)
+    }
+}
+
+@keyframes ani_arrow {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px)
+    }
+    40% {
+        opacity: 1;
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px)
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px)
+    }
+}
+
+
+/**  bounceIn 反跳  **/
+
+.trans .an-enterUpBounce{
+    -webkit-animation: enterUpBounce 0.6s linear 0s;
+    -moz-animation: enterUpBounce 0.6s linear 0s ;
+    -ms-animation: enterUpBounce 0.6s linear 0s ;
+    animation: enterUpBounce 0.6s linear 0s ;
+}
+
+.trans .an-bounceIn{
+    -webkit-animation: bounceIn 0.3s linear 1s ;
+    -moz-animation: bounceIn 0.3s linear 1s ;
+    -ms-animation: bounceIn 0.3s linear 1s ;
+    animation: bounceIn 0.3s linear 1s ;
+}
+
+.trans .an-bounceIn-02{
+    -webkit-animation: bounceIn 0.3s ease-in 1.5s;
+    -moz-animation: bounceIn 0.3s ease-in 1.5s;
+    -ms-animation: bounceIn 0.3s ease-in 1.5s;
+    animation: bounceIn 0.3s ease-in 1.5s;
+}
+
+@-webkit-keyframes enterUpBounce {
+    0% {
+        -webkit-transform: translateY(-220px);
+        opacity: 0
+    }
+    50% {
+        -webkit-transform: translateY(0px)
+    }
+    70% {
+        -webkit-transform: translateY(-20px)
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@-moz-keyframes enterUpBounce {
+    0% {
+        -webkit-transform: translateY(-220px);
+        opacity: 0
+    }
+    50% {
+        -webkit-transform: translateY(0px)
+    }
+    70% {
+        -webkit-transform: translateY(-20px)
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@-ms-keyframes enterUpBounce {
+    0% {
+        -webkit-transform: translateY(-220px);
+        opacity: 0
+    }
+    50% {
+        -webkit-transform: translateY(0px)
+    }
+    70% {
+        -webkit-transform: translateY(-20px)
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@keyframes enterUpBounce {
+    0% {
+        -webkit-transform: translateY(-220px);
+        opacity: 0
+    }
+    50% {
+        -webkit-transform: translateY(0px)
+    }
+    70% {
+        -webkit-transform: translateY(-20px)
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        opacity: 1
+    }
+}
+
+
+@-webkit-keyframes bounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(2.3);
+        -ms-transform: scale(2.3);
+        transform: scale(2.3)
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05)
+    }
+    70% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@-moz-keyframes bounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(2.3);
+        -ms-transform: scale(2.3);
+        transform: scale(2.3)
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05)
+    }
+    70% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@-ms-keyframes bounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(2.3);
+        -ms-transform: scale(2.3);
+        transform: scale(2.3)
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05)
+    }
+    70% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(2.3);
+        -ms-transform: scale(2.3);
+        transform: scale(2.3)
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05)
+    }
+    70% {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+/** 动画常用 **/
+
+
+/** 保持结束帧 **/
+.an-util-forwards{
+    -webkit-animation-fill-mode: forwards !important;
+    -moz-animation-fill-mode: forwards !important;
+    -o-animation-fill-mode: forwards !important;
+    animation-fill-mode: forwards !important;
+}
+
+.an-util-both{
+    -webkit-animation-fill-mode: both !important;
+    -moz-animation-fill-mode: both !important;
+    -o-animation-fill-mode: both !important;
+    animation-fill-mode: both !important;
+}
+
+/** 保持开始帧 **/
+.an-util-backwards{
+    -webkit-animation-fill-mode: backwards  !important;;
+    -moz-animation-fill-mode: backwards !important;
+    -o-animation-fill-mode: backwards !important;
+    animation-fill-mode: backwards !important;
+}
+
+
+
+
+
+/* 3D变形会消耗更多的内存与功耗，应确实有性能问题时才去使用它，兼在权衡  */
+.d3{
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+
+/** 元素卡顿现象 **/
+.backface{
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+}
