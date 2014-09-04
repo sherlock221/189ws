@@ -12,7 +12,7 @@
     var Cons = {
         LayerHeight: 0,
         currentIndex : 0,
-        lastIndex   : 0
+        LastIndex   : 0
     };
 
 
@@ -36,14 +36,32 @@
         button: function () {
 
             var $screen = UI.ScreenAll.find(".screen");
+            Cons.LastIndex = $screen.size() -1;
 
-                UI.ScreenAll.on("swipeUp",function(){
-                    alert("up!!");
-                });
+            $("body").touchwipe({
+                listen : 'y',
+                start  :  function(result){
+                    console.log("开始滑动...");
+                },
+                move   : function(result){
+
+                },
+                stop   : function(result){
+                    //从下往上
+                    if(result.dy > 0){
+                        Cons.currentIndex++;
+                    }
+                    //从上往下
+                    else{
+                        Cons.currentIndex--;
+                    }
+                    Cons.currentIndex = currentIndexSlice(Cons.currentIndex);
+                    toggleDot(Cons.currentIndex);
+                }
+
+            });
 
 
-
-            var core = 1;
 
 //            //导航条展开按钮
 //            UI.collapsenNav.bind("click",function(){
@@ -61,29 +79,14 @@
 //            });
 
 
-            //上下滑动部分
-           var  args={
-                iniL:30,//X方向滑动的最小距离
-                iniT:50,//Y方向滑动的最大距离
-                eCallback:function(tPoint){
-                    alert(tPoint.direction);
-                    switch(tPoint.direction){
-                        case "left":
-                            alert("left");
-                            break;
-                        case "right":
-                            alert("right");
-                    }
-                }
-            };
-
-
 
             function toggleDot(index){
                 //改变效用
                 var node = $screen.filter("[id='screen"+index+"']").addClass("trans").siblings().removeClass("trans");
                 transformLayer(index);
             };
+
+
 
 
 
@@ -105,13 +108,17 @@
     //竖向滑动层
     function transformLayer(index) {
         var height = Cons.LayerHeight * index;
-        UI.FixRelative.css("transform", "translate(0px, -" + height + "px)");
+        var tranPx = "translate(0px, -" + height + "px)";
+        UI.ScreenAll.css({
+            "-webkit-transform" : "translate(0px, -" + height + "px)"
+
+        });
 
     }
 
     //滚动范围判断
     function currentIndexSlice(index){
-        var LastIndex = UI.DotList.find("li").size()-1;
+        var LastIndex = Cons.LastIndex;
         if(index > LastIndex )
               index = LastIndex;
         else if(index < 0 ){

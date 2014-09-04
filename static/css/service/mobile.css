@@ -7,22 +7,43 @@
 
 /** 整体屏幕 **/
 .screen-all{
-    height: inherit;
-}
+    height: 100%;
+    width: 100%;
+    -webkit-transition:  -webkit-transform 1s ease;
+    transition: transform 1s ease;
 
+
+    position: absolute;
+    left: 0px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+}
 
 .screen{
     position: relative;
     overflow: hidden;
-
     height: 100%;
+    width: 100%;
 }
 .screen .main{
     height: inherit;
 }
 
-#screen01{
+#screen0{
     background: #0e79ef;
+}
+
+#screen2{
+    background: #53bcf3;
+}
+
+#screen2 .bottom-screen{
+    background: #53bcf3;
+}
+#screen3{
+    background: #9a2ace;
 }
 
 
@@ -55,7 +76,32 @@
     margin-left : -92px;
 }
 
+.screen03-text{
+    background-image: url("../../images/mobile/screen-03-text.png");
+    background-size: 206px  69px;
+    background-repeat: no-repeat;
+    width: 206px;
+    height: 69px;
 
+    position: absolute;
+    left: 50%;
+    top : 50%;
+    margin-top : -32.5px;
+    margin-left : -103px;
+}
+
+.screen04-text{
+    background-image: url("../../images/mobile/screen-04-text.png");
+    background-size: 206px  69px;
+    background-repeat: no-repeat;
+    width: 206px;
+    height: 69px;
+
+    position: absolute;
+    left: 50%;
+    top : 10%;
+    margin-left : -103px;
+}
 
 .hidden-val {
     height: 0;
@@ -126,7 +172,7 @@
 /** 2x图片 **/
 .all-img{
     background-image: url("../../images/mobile/all.png");
-    background-size: 300px 400px;
+    background-size: 550px 424px;
     background-repeat: no-repeat;
 }
 
@@ -138,9 +184,9 @@
     height: 35px;
 }
 .logo-title{
-    background-position: 0 -35px;
-    width:  61px;
-    height: 31px;
+    background-position: 0 -39px;
+    width:  55px;
+    height: 21px;
 }
 .bottom-all{
     position: absolute;
@@ -153,30 +199,31 @@
 /** 屏幕背景 **/
 .top-screen{
     height: 68%;
+    position: relative;
 }
 
 .bottom-screen{
     height:  32%;
-}
-
-
-#screen02 .top-screen{
-    background: #0fd1c1;
     position: relative;
 }
 
-#screen02 .bottom-screen{
+
+#screen1 .top-screen{
+    background: #fbc89e;
+    position: relative;
+}
+
+#screen1 .bottom-screen{
     background: #e57113;
     position: relative;
 }
 
 
 
-
 .iphone-mobile{
-    background-position: -139px -91px;
-    width: 161px;
-    height: 218px;
+    background-position: 0 -198.5px;
+    width: 163px;
+    height: 219px;
     position: absolute;
     bottom: -3px;
     left: 50%;
@@ -184,7 +231,254 @@
 }
 
 
+
+/** 星星变化 **/
+.star-small{
+
+}
+.star-normal{
+
+}
+.star-big{
+
+}
+
+
+/** 房屋坐标 **/
+.big-house{
+    background-position: -117.5px -66px;
+    width: 158px;
+    height: 132.5px;
+    margin: 0 12px;
+    position: relative;
+}
+
+.left-house{
+    width: 38px;
+    height: 86px;
+    background-position: -117.5px -113px;
+}
+
+.right-house{
+
+
+}
+
+
+.screen2-main{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -143px;
+}
+
+/** 地球 书本 **/
+.earth-wrap{
+    background-position: -61px 0px;
+    width: 52.5px;
+    height: 63px;
+    position: relative;
+}
+
+.earth{
+    background-position: -64px -67px;
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    top: 1px;
+    right: 4px;
+}
+.book{
+    background-position: 0 -67px;
+    width: 43px;
+    height: 37.5px;
+
+}
+
+.sun{
+    background-position: 0 -108.5px;
+    width: 75px;
+    height: 75px;
+
+    position: absolute;
+    top: 6%;
+    right: 8%
+}
+
+
+.cloud-01{
+    background-position: -117.5px 0;
+    width: 95px;
+    height: 22px;
+
+    position: absolute;
+    top: 19%;
+    left: -42px;
+}
+
+
+
+/** 窗户部分 **/
+.wd-list{
+    overflow: hidden;
+
+    width: 58px;
+    position: absolute;
+    top: 44px;
+    left: 54px
+}
+.wd-list li{
+    float: left;
+
+    margin-right: 6px;
+    margin-bottom: 1px;
+}
+.wd-01{
+    width: 13px;
+    height: 13px;
+    background: #dda3ec;
+}
+
+.wd-02{
+    width: 13px;
+    height: 13px;
+    background: #ffec86;
+}
+
+.wd-03{
+    width: 13px;
+    height: 13px;
+    background: #b3ecff;
+}
+
+.wd-04{
+    width: 13px;
+    height: 13px;
+    background: #ffbc86;
+}
+
+.wd-05{
+    width: 13px;
+    height: 13px;
+    background: #94ff4c;
+}
+
+.door{
+    background: #f9cd48;
+    width: 21px;
+    height: 26px;
+
+
+    position: absolute;
+    bottom: 3px;
+    left: 69px;
+}
+
+.wd-list-left{
+    overflow: hidden;
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+}
+
+.wd-list-right{
+    overflow: hidden;
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+}
+
+
+
+/** 桌子 人 **/
+.table-ft{
+    width: 130.5px;
+    height: 133px;
+    background-position: -280px -291px;
+}
+
+.table-rt{
+    width: 136px;
+    height: 133px;
+    background-position: -411px -291px;
+}
+
+.people-man{
+    width: 131px;
+    height: 87.5px;
+    background-position: -281px -198.5px;
+}
+
+.people-wo{
+
+}
+
 /** 动画部分 **/
+
+
+/** 闪烁 **/
+.trans  .blink-01{
+    -webkit-animation: blink 1s linear 1.2s infinite;
+    -moz-animation: blink 1s linear 1.2s infinite;
+    -ms-animation: blink 1s linear 1.2s infinite;
+    animation: blink 1s linear 1.2s infinite;
+}
+
+
+.trans  .blink-02{
+    -webkit-animation: blink 1s linear 0.8s infinite;
+    -moz-animation: blink 1s linear 0.8s infinite;
+    -ms-animation: blink 1s linear 0.8s infinite;
+    animation: blink 1s linear 0.8s infinite;
+}
+
+.trans  .blink-03{
+    -webkit-animation: blink 1s linear 0 infinite;
+    -moz-animation: blink 1s linear 0  infinite;
+    -ms-animation: blink 1s linear 0 infinite;
+    animation: blink 1s linear 0 infinite;
+}
+
+
+.trans  .blink-04{
+    -webkit-animation: blink 1s linear 0.5s infinite;
+    -moz-animation: blink 1s linear 0.5s  infinite;
+    -ms-animation: blink 1s linear 0.5s infinite;
+    animation: blink 1s linear 0.5s infinite;
+}
+
+
+.trans .sun{
+    -webkit-animation: rotate360 7s linear 0s infinite;
+    -moz-animation: rotate360 7s linear 0s infinite;
+    -ms-animation: rotate360 7s linear 0s infinite;
+    animation: rotate360 7s linear 0s infinite;
+}
+
+.trans .earth-an{
+    -webkit-animation: rotate360 10s linear 0s infinite;
+    -moz-animation: rotate360 10s linear 0s infinite;
+    -ms-animation: rotate360 10s linear 0s infinite;
+    animation: rotate360 10s linear 0s infinite;
+}
+
+
+.trans .house-an{
+    -webkit-animation: fanzhi 0.4s linear 0.5s ;
+    -moz-animation: rotate360 10s linear 0s infinite;
+    -ms-animation: rotate360 10s linear 0s infinite;
+    animation: rotate360 10s linear 0s infinite;
+}
+
+.trans .house-an-02{
+    -webkit-animation: fanzhi 0.4s linear 0.9s;
+
+}
+
+.trans .house-an-03{
+    -webkit-animation: fanzhi 0.4s linear 1.3s;
+
+}
 
 .trans .arrowDown{
     -webkit-animation: arrowDown 1.2s ease-in 0s infinite;
@@ -201,10 +495,10 @@
 }
 
 .trans .bounceInDown{
-    -webkit-animation: bounceInDown 0.6s linear 0s;
-    -moz-animation: bounceInDown 0.6s linear 0s ;
-    -ms-animation: bounceInDown 0.6s linear 0s ;
-    animation: bounceInDown 0.6s linear 0s ;
+    -webkit-animation: bounceInDown 0.6s linear 0.4s;
+    -moz-animation: bounceInDown 0.6s linear 0.4s ;
+    -ms-animation: bounceInDown 0.6s linear 0.4s ;
+    animation: bounceInDown 0.6s linear 0.4s ;
 }
 
 .trans .bounceIn{
@@ -221,6 +515,13 @@
     animation: bounceIn 0.3s ease-in 1.5s;
 }
 
+.trans .bounceIn-03{
+    -webkit-animation: bounceIn 0.3s ease-in 0.5s;
+    -moz-animation: bounceIn 0.3s ease-in 0.5s;
+    -ms-animation: bounceIn 0.3s ease-in 0.5s;
+    animation: bounceIn 0.3s ease-in 0.5s;
+}
+
 .trans .bounceInLeft{
     -webkit-animation: bounceInLeft 0.6s  0.5s;
     -moz-animation: bounceInLeft 0.3s ease-in 1.5s;
@@ -230,7 +531,6 @@
 
 
 /** 动画常用 **/
-pc
 /** 保持结束帧 **/
 .an-util-forwards{
     -webkit-animation-fill-mode: forwards !important;
