@@ -32,6 +32,13 @@
             //事件初始化
             Event.button();
 
+
+
+            $(window).resize(function(){
+
+                alert("窗口发生变化")
+            });
+
         },
         button: function () {
 
