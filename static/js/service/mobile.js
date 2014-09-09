@@ -6,7 +6,8 @@
 
 
     var UI = {
-       ScreenAll : $("#screen-all")
+       ScreenAll : $("#screen-all"),
+       dowLoad  :  $("#btnDow")
     };
 
     var Cons = {
@@ -16,10 +17,36 @@
     };
 
 
+//下载链接
+var isMobile = {
+    Android: function () {
+        return navigator.userAgent.match(/Android/i) ? true : false;
+    },
+    iOS: function () {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
+    }
+};
+
 
     var Event = {
 
         init: function () {
+
+
+
+
+
+            UI.dowLoad.click(function(){
+
+                if(isMobile.iOS()){
+                    window.location.href='https://itunes.apple.com/us/app/xiao-yuan-yun/id905913921?l=zh&ls=1&mt=8';
+                }
+                else{
+                    window.location.href='http://t.xy189.cn/twoDimenSign.action';
+                }
+
+            });
+
 
 
             var scroll=function(e){
@@ -27,6 +54,9 @@
                 window.location.href =  window.location.href;
             }
             window.onscroll=scroll;
+
+
+
             //自适应高度
             var $screen = UI.ScreenAll.find(".screen");
 
