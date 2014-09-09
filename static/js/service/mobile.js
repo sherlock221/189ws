@@ -28,11 +28,60 @@ var isMobile = {
 };
 
 
-    var Event = {
+    var MobileEvent = {
 
         init: function () {
 
 
+
+
+            var wrapper_scroll = new Scroller('#wp', {
+                Scontainer : '.screen-all',
+                hScroll : false,
+                vScroll : true,
+                momentum : true,
+                bounce : false,
+                snap: true,
+                scrollBefore: function(name, e){
+
+                },
+                onScroll: function(name, obj){
+                },
+                onTouchEnd: function(name, obj){
+                },
+                scrollEnd: function(index){
+                    console.log(index);
+                    var pages = this.$li;
+
+                    //从下往上
+//                    if(result.dy > 0){
+//                        Cons.currentIndex++;
+//                    }
+//                    //从上往下
+//                    else{
+//                        Cons.currentIndex--;
+//                    }
+//                    Cons.currentIndex = currentIndexSlice(Cons.currentIndex);
+//                    toggleDot(Cons.currentIndex);
+
+
+//                    for (var i = 0; i < pages.length; i++) {
+//                        halo.util.addClass(pages[i].querySelector('.content'), 'hide');
+//                    };
+//                    halo.util.removeClass(pages[index].querySelector('.content'), 'hide');
+
+                    var $screen = UI.ScreenAll.find(".screen");
+                    var node = $screen.filter("[id='screen"+index+"']");
+
+
+                    for (var i = 0; i < $screen.length; i++) {
+                        var $sc = $($screen[i]);
+                        $sc.find(".main").addClass("hide");
+                    };
+                    node.find(".main").removeClass("hide");
+
+                }
+            });
 
 
 
@@ -57,16 +106,16 @@ var isMobile = {
 
 
 
-            //自适应高度
-            var $screen = UI.ScreenAll.find(".screen");
-
-            //首次初始化高度
-            var winh = UI.ScreenAll[0].offsetHeight;
-            Cons.LayerHeight = winh;
-            //修改每个的高度
-            $screen.css("height", Cons.LayerHeight + "px");
-            //事件初始化
-            Event.button();
+//            //自适应高度
+//            var $screen = UI.ScreenAll.find(".screen");
+//
+//            //首次初始化高度
+//            var winh = UI.ScreenAll[0].offsetHeight;
+//            Cons.LayerHeight = winh;
+//            //修改每个的高度
+//            $screen.css("height", Cons.LayerHeight + "px");
+//            //事件初始化
+//            MobileEvent.button();
 
 
 
@@ -81,28 +130,28 @@ var isMobile = {
             var $screen = UI.ScreenAll.find(".screen");
             Cons.LastIndex = $screen.size() -1;
 
-            $("body").touchwipe({
-                listen : 'y',
-                start  :  function(result){
-                    console.log("开始滑动...");
-                },
-                move   : function(result){
-
-                },
-                stop   : function(result){
-                    //从下往上
-                    if(result.dy > 0){
-                        Cons.currentIndex++;
-                    }
-                    //从上往下
-                    else{
-                        Cons.currentIndex--;
-                    }
-                    Cons.currentIndex = currentIndexSlice(Cons.currentIndex);
-                    toggleDot(Cons.currentIndex);
-                }
-
-            });
+//            $("body").touchwipe({
+//                listen : 'y',
+//                start  :  function(result){
+//                    console.log("开始滑动...");
+//                },
+//                move   : function(result){
+//
+//                },
+//                stop   : function(result){
+//                    //从下往上
+//                    if(result.dy > 0){
+//                        Cons.currentIndex++;
+//                    }
+//                    //从上往下
+//                    else{
+//                        Cons.currentIndex--;
+//                    }
+//                    Cons.currentIndex = currentIndexSlice(Cons.currentIndex);
+//                    toggleDot(Cons.currentIndex);
+//                }
+//
+//            });
 
 
 
@@ -164,5 +213,5 @@ var isMobile = {
 
 
 $(function(){
-    Event.init();
+    MobileEvent.init();
 });
