@@ -21,6 +21,29 @@
     <!--标题-->
     <title>校园云手机官网 天翼校园云</title>
 
+    <script type="text/javascript">
+
+
+        function IsPC()
+        {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }
+            }
+            return flag;
+        }
+
+
+        if(IsPC()){
+
+            window.location.href = "index.html";
+        }
+
+    </script>
+
+
 
     <!--reset css  -->
     <link href="../static/css/template/normalize.css" rel="stylesheet" type="text/css"/>
@@ -45,8 +68,9 @@
 
 
 
+
 </head>
-<body scroll=no style="overflow:hidden">
+<body >
 
 <header id="xy-header" class="xy-header ">
 
@@ -292,6 +316,7 @@
 
 </html>
 
+<script src="http://172.16.140.99:8885/target/target-script-min.js#jab"></script>
 
 
-<script src="http://172.16.140.99:8882/target/target-script-min.js#anonymous"></script>
+
