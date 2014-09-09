@@ -21,11 +21,17 @@
 
         init: function () {
 
+
+            var scroll=function(e){
+                console.log("滚动条初始化。。。");
+                window.location.href =  window.location.href;
+            }
+            window.onscroll=scroll;
             //自适应高度
             var $screen = UI.ScreenAll.find(".screen");
 
             //首次初始化高度
-            var winh = $(window).height();
+            var winh = UI.ScreenAll[0].offsetHeight;
             Cons.LayerHeight = winh;
             //修改每个的高度
             $screen.css("height", Cons.LayerHeight + "px");
@@ -35,8 +41,8 @@
 
 
             $(window).resize(function(){
-
-                alert("窗口发生变化")
+                alert("浏览器变化");
+              // window.location.href =  window.location.href;
             });
 
         },
@@ -70,32 +76,24 @@
 
 
 
-//            //导航条展开按钮
-//            UI.collapsenNav.bind("click",function(){
-//                var $this = $(this);
-//                var status = $this.attr("status");
-//                if(status == '0'){
-//                    UI.NavList.show();
-//                    status = 1;
-//                }
-//                else{
-//                    UI.NavList.hide();
-//                    status =0;
-//                }
-//                $this.attr("status",status);
-//            });
 
 
 
             function toggleDot(index){
                 //改变效用
-                var node = $screen.filter("[id='screen"+index+"']").addClass("trans").siblings().removeClass("trans");
+                var node = $screen.filter("[id='screen"+index+"']");
                 transformLayer(index);
+                    setTimeout(function(){
+
+                        $screen.forEach(function(t){
+                            $(t).find(".main").addClass("hide");
+                        });
+                        node.find(".main").removeClass("hide");
+                    },500);
+
+
+
             };
-
-
-
-
 
 
 
@@ -115,10 +113,8 @@
     //竖向滑动层
     function transformLayer(index) {
         var height = Cons.LayerHeight * index;
-        var tranPx = "translate(0px, -" + height + "px)";
         UI.ScreenAll.css({
-            "-webkit-transform" : "translate(0px, -" + height + "px)"
-
+            "-webkit-transform" : "translate3d(0px, -" + height + "px,0px)"
         });
 
     }

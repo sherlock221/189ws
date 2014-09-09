@@ -5,19 +5,26 @@
  */
 
 
+
+*  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
+input, textarea  { -webkit-user-select:text; }
+
 /** 整体屏幕 **/
 .screen-all{
     height: 100%;
     width: 100%;
-    -webkit-transition:  -webkit-transform 1s ease;
-    transition: transform 1s ease;
-
+    -webkit-transition:  -webkit-transform 0.6s ease;
+    transition: transform  0.6s ease;
 
     position: absolute;
     left: 0px;
     top: 0;
     right: 0;
     bottom: 0;
+
+
+
+
 
 }
 
@@ -27,33 +34,20 @@
     height: 100%;
     width: 100%;
 }
-.screen .main{
-    height: inherit;
-}
+.screen .main{ height: 100%;   width: 100%;  overflow: hidden; position: relative;}
 
-#screen0{
-    background: #0e79ef;
-}
-
-#screen2{
-    background: #53bcf3;
-}
-
-#screen2 .bottom-screen{
-    background: #53bcf3;
-}
-#screen3{
-    background: #9a2ace;
-}
-
-#screen4{
-    background: #dfba99;
-}
+#screen0{background: #0e79ef;}
+#screen1{  background: #fbc89e;}
+#screen1 .bottom-screen{background: #e57113;}
+#screen2{  background: #53bcf3;}
+#screen2 .bottom-screen{  background: #53bcf3;}
+#screen3{  background: #9a2ace;}
+#screen4{ background: #dfba99;}
+/** 整体屏幕 **/
 
 
 
 /** 每屏幕文字部分 **/
-
 .screen01-text{
     background-image: url("../../images/mobile/screen-01-text.png");
     background-size: 255px 120px;
@@ -61,7 +55,7 @@
     width: 255px;
     height: 120px;
 
-    position: relative;
+    position: absolute;
     left: 50%;
     top: 6%;
     margin-left : -127px;
@@ -120,13 +114,12 @@
     margin-left : -95px;
 }
 
-.hidden-val {
-    height: 0;
-    overflow: hidden;
-    font-size: 0;
-    line-height: 0;
-    text-indent: -9999px;
-}
+/** 每屏幕文字部分 **/
+
+/** 上下分屏 **/
+.top-screen{   height: 68%;   position: absolute;   width: 100%; }
+.bottom-screen{  height:  32%;   position: absolute;  bottom: 0px;  width: 100%;}
+/** 上下分屏 **/
 
 
 
@@ -134,15 +127,12 @@
 .icon{
     background-image: url("../../images/mobile/icon.png");
     background-size: 64px  64px;
-
-
 }
 
 .icon-dowload{
     width: 16px;
     height: 16px;
     background-position:  0 0;
-
     position: relative;
     top: 1px;
     margin-right: 4px;
@@ -151,9 +141,17 @@
 .icon-arrow{
     width: 16px;
     height: 16px;
-    background-position:  -16px 0;
+    background-position:  0 -16px;
 }
 
+.star-main{
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    margin-left: -80.5px;
+    width: 163px;
+    height: 219px;
+}
 
 .btn{
     text-align: center;
@@ -180,7 +178,7 @@
 
 .arrow{
     position: absolute;
-    bottom: 10px;
+    bottom: 6px;
     left: 50%;
     margin-left: -8px;
 }
@@ -205,39 +203,18 @@
     width:  55px;
     height: 21px;
 }
-.bottom-all{
+.logo-all{
     position: absolute;
     bottom: 30px;
     left: 50%;
     margin-left: -28px;
-
-
 }
 
 
 
 
-/** 屏幕背景 **/
-.top-screen{
-    height: 68%;
-    position: relative;
-}
-
-.bottom-screen{
-    height:  32%;
-    position: relative;
-}
 
 
-#screen1{
-    background: #fbc89e;
-
-}
-
-#screen1 .bottom-screen{
-    background: #e57113;
-    position: relative;
-}
 
 
 
@@ -315,15 +292,7 @@
     top: -69px;
 }
 
-/** 房屋坐标 **/
-.big-house{
-    background-position: -117.5px -66px;
-    width: 158px;
-    height: 132.5px;
-    margin: 0 12px;
-    position: relative;
-    bottom: -2px;
-}
+
 
 .left-house{
     width: 38px;
@@ -339,9 +308,11 @@
 
 .screen2-main{
     position: absolute;
-    bottom: -5px;
+    bottom: -18px;
     left: 50%;
     margin-left: -143px;
+
+
 }
 
 /** 地球 书本 **/
@@ -349,22 +320,36 @@
     background-position: -61px 0px;
     width: 52.5px;
     height: 63px;
+
     position: relative;
+    bottom: 16px;
 }
 
 .earth{
     background-position: -64px -67px;
     width: 46px;
     height: 46px;
-    position: absolute;
-    top: 1px;
-    right: 4px;
+
 }
+
+/** 房屋坐标 **/
+.big-house{
+    background-position: -117.5px -66px;
+    width: 158px;
+    height: 132.5px;
+    margin: 0 12px;
+
+    position: relative;
+    bottom: -3px;
+}
+
 .book{
     background-position: 0 -67px;
     width: 43px;
     height: 37.5px;
 
+    position: relative;
+    bottom: 0px;
 }
 
 .sun{
@@ -378,7 +363,7 @@
 }
 
 
-.cloud-01{
+.left-cloud{
     background-position: -117.5px 0;
     width: 95px;
     height: 22px;
@@ -387,13 +372,9 @@
     top: 19%;
     left: -35px;
 
-
-
 }
 
-
-.cloud-02{
-
+.right-cloud{
     background-position: -117.5px -36px;
     width: 113.5px;
     height: 27px;
@@ -481,9 +462,11 @@
     width: 130.5px;
     height: 133px;
     background-position: -280px -291px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
 
-    position: relative;
-    z-index: 4;
 }
 
 .table-rt{
@@ -491,8 +474,11 @@
     height: 133px;
     background-position: -412px -291px;
 
-    position: relative;
-    z-index: 4;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+
 }
 
 .people-man{
@@ -500,11 +486,13 @@
     height: 87.5px;
     background-position: -281px -198.5px;
 
+
     position: absolute;
     top: -78px;
     left: 25px;
-    z-index: 3;
+    z-index: 1;
 }
+
 
 .people-wo{
     width: 83.5px;
@@ -514,7 +502,7 @@
     position: absolute;
     top: -78px;
     right: 25px;
-    z-index: 3;
+    z-index: 1;
 }
 
 
@@ -522,6 +510,8 @@
     position: absolute;
     left: 0;
     top: 55%;
+    right: 0;
+    bottom: 0;
 }
 
 .right-slide{
@@ -769,7 +759,6 @@
     height: 90px;
     position: absolute;
     top: -90px;
-    left: -13px;
     z-index: 4;
 
 }
@@ -856,278 +845,4 @@
 }
 
 
-.trans .ballon{
-    -webkit-animation: ballon-01 10s ease-in 0s infinite;
-}
 
-.trans .cloud-02{
-    -webkit-animation: cloud-02 10s ease-in 0s infinite;
-}
-.trans .cloud-01{
-    -webkit-animation: cloud 15s ease-in 0s infinite;
-}
-
-.trans .bounceInUp{
-    opacity: 0;
-    -webkit-animation: bounceInUp 0.5s linear 0.8s;
-    -moz-animation: bounceInUp 0.5s linear 0.3s;
-    -ms-animation: bounceInUp 0.5s linear 0.3s;
-    animation: bounceInUp 0.5s linear 0.3s;
-
-}
-
-.trans .bottom-all{
-    opacity: 0;
-    -webkit-animation: bounceIn 0.3s linear 1.4s;
-    -moz-animation: bounceIn 0.3s linear 1s;
-    -ms-animation: bounceIn 0.3s linear 1s;
-    animation: bounceIn 0.3s linear 1s;
-}
-
-/** 山路 **/
-.trans .m-road.tile{
-    -webkit-animation: tile 0.5s linear 0.5s;
-    animation :  tile 0.5s linear 0.5s;
-}
-
-.trans .bank{
-    -webkit-animation:  bounceInLeft  0.7s linear 1.4s;
-    animation:  bounceInLeft  0.7s linear 1.4s;
-}
-
-.trans .mon{
-     -webkit-animation: fanzhi 0.4s linear 0.9s;
-     animation: fanzhi 0.4s linear 0.9s;
-}
-
-.trans  .line.tile {
-    -webkit-animation: tile 0.5s linear 0.5s;
-    animation: tile 0.5s linear 0.5s;
-}
-
-.trans .car{
-    -webkit-animation: bounceInRight 4s ease  1s;
-    animation: bounceInRight 4s ease  1s;
-}
-
-.trans .shanche{
-    -webkit-animation: bounceInRight 0.7s ease-in  1.8s;
-    animation: bounceInRight 0.7s ease-in  1.8s;
-}
-
-.trans  .deng{
-    opacity: 0;
-    -webkit-animation: blink 1s linear 4.8s infinite;
-    -moz-animation: blink 1s linear 4.8s infinite;
-    -ms-animation: blink 1s linear 4.8s infinite;
-    animation: blink 1s linear 4.8s infinite;
-}
-
-.trans  .yan{
-    opacity: 0;
-    -webkit-animation: blink2 1.8s linear 2s infinite;
-    -moz-animation: blink 1s linear  4s infinite;
-    -ms-animation: blink 1s linear 4s infinite;
-    animation: blink 1s linear  4s infinite;
-}
-
-
-/** 动画部分 **/
-
-.trans .screen04-text.bounceIn{
-    -webkit-animation: bounceIn 0.3s ease-in 2s;
-
-
-    -moz-animation: bounceIn 0.3s ease-in  2s;
-    -ms-animation: bounceIn 0.3s ease-in  2;
-    animation: bounceIn 0.3s ease-in 2s;
-}
-
-.trans  .table-rt.bounceIn,  .trans  .table-ft.bounceIn{
-    opacity: 0;
-    -webkit-animation: bounceIn 0.3s linear 0.6s;
-
-    -moz-animation: bounceIn 0.3s linear 0.6s ;
-    -ms-animation: bounceIn 0.3s linear 0.6s ;
-    animation: bounceIn 0.3s linear 0.6s ;
-}
-
-
-.trans .people-wo.bounceInLeft{
-
-    -webkit-animation: bounceInRight 1s ease-in  0.8s;
-
-    -moz-animation: bounceInRight  1s ease-in 1s;
-    -ms-animation: bounceInRight 1s ease-in 1s;
-    animation: bounceInRight 1s ease-in 1s;
-}
-
-.trans .people-man.bounceInRight{
-    -webkit-animation: bounceInLeft 1s ease-in  0.8s;
-
-    -moz-animation: bounceInLeft  1s ease-in 1.2s;
-    -ms-animation: bounceInLeft 1s ease-in 1.2s;
-    animation: bounceInLeft 1s ease-in 1.2s;
-}
-
-/** 闪烁 **/
-.trans  .blink-01{
-    -webkit-animation: blink 1s linear 1.2s infinite;
-    -moz-animation: blink 1s linear 1.2s infinite;
-    -ms-animation: blink 1s linear 1.2s infinite;
-    animation: blink 1s linear 1.2s infinite;
-}
-
-
-.trans  .blink-02{
-    -webkit-animation: blink 1s linear 0.8s infinite;
-    -moz-animation: blink 1s linear 0.8s infinite;
-    -ms-animation: blink 1s linear 0.8s infinite;
-    animation: blink 1s linear 0.8s infinite;
-}
-
-.trans  .blink-03{
-    -webkit-animation: blink 1s linear 0 infinite;
-    -moz-animation: blink 1s linear 0  infinite;
-    -ms-animation: blink 1s linear 0 infinite;
-    animation: blink 1s linear 0 infinite;
-}
-
-
-.trans  .blink-04{
-    -webkit-animation: blink 1s linear 0.5s infinite;
-    -moz-animation: blink 1s linear 0.5s  infinite;
-    -ms-animation: blink 1s linear 0.5s infinite;
-    animation: blink 1s linear 0.5s infinite;
-}
-
-
-.trans .sun{
-    -webkit-animation: rotate360 7s linear 0s infinite;
-    -moz-animation: rotate360 7s linear 0s infinite;
-    -ms-animation: rotate360 7s linear 0s infinite;
-    animation: rotate360 7s linear 0s infinite;
-}
-
-.trans .earth-an{
-    -webkit-animation: rotate360 10s linear 0s infinite;
-    -moz-animation: rotate360 10s linear 0s infinite;
-    -ms-animation: rotate360 10s linear 0s infinite;
-    animation: rotate360 10s linear 0s infinite;
-}
-
-
-.trans .house-an{
-    -webkit-animation: fanzhi 0.4s linear 1s ;
-    -moz-animation: rotate360 0.4s linear 0.8s infinite;
-    -ms-animation: rotate360 0.4s linear 0.8s infinite;
-    animation: rotate360 0.4s linear 0.8s infinite;
-}
-
-.trans .house-an-02{
-    -webkit-animation: fanzhi 0.4s linear 1.3s;
-
-}
-
-.trans .house-an-03{
-    -webkit-animation: fanzhi 0.4s linear 1.6s;
-
-}
-
-.trans .arrowDown{
-    -webkit-animation: arrowDown 1.2s ease-in 0s infinite;
-    -moz-animation: arrowDown 1.2s ease-in 0s infinite;
-    -ms-animation: arrowDown 1.2s ease-in 0s infinite;
-    animation: arrowDown 1.2s ease-in 0s infinite;
-}
-
-.trans .arrowUp{
-    -webkit-animation: arrowUp 1.2s ease-in 0s infinite;
-    -moz-animation: arrowUp 1.2s ease-in 0s infinite;
-    -ms-animation: arrowUp 1.2s ease-in 0s infinite;
-    animation: arrowUp 1.2s ease-in 0s infinite;
-}
-
-.trans .bounceInDown{
-    -webkit-animation: bounceInDown 0.6s linear 0.4s;
-    -moz-animation: bounceInDown 0.6s linear 0.4s ;
-    -ms-animation: bounceInDown 0.6s linear 0.4s ;
-    animation: bounceInDown 0.6s linear 0.4s ;
-}
-
-.trans .bounceIn{
-    -webkit-animation: bounceIn 0.3s linear 1s ;
-    -moz-animation: bounceIn 0.3s linear 1s ;
-    -ms-animation: bounceIn 0.3s linear 1s ;
-    animation: bounceIn 0.3s linear 1s ;
-}
-
-.trans .bounceIn-02{
-    -webkit-animation: bounceIn 0.3s ease-in 2s;
-    -moz-animation: bounceIn 0.3s ease-in 2s;
-    -ms-animation: bounceIn 0.3s ease-in 2s;
-    animation: bounceIn 0.3s ease-in 2s;
-}
-
-.trans .bounceIn-03{
-    -webkit-animation: bounceIn 0.3s ease-in 1.5s;
-    -moz-animation: bounceIn 0.3s ease-in 1.5s;
-    -ms-animation: bounceIn 0.3s ease-in 1.5s;
-    animation: bounceIn 0.3s ease-in 1.5s;
-}
-
-
-
-
-.trans .bounceInLeft{
-    -webkit-animation: bounceInLeft 0.6s ease 1.5s;
-}
-
-
-/** 动画常用 **/
-/** 保持结束帧 **/
-.an-util-forwards{
-    -webkit-animation-fill-mode: forwards !important;
-    -moz-animation-fill-mode: forwards !important;
-    -o-animation-fill-mode: forwards !important;
-    animation-fill-mode: forwards !important;
-}
-
-.an-util-both{
-    -webkit-animation-fill-mode: both !important;
-    -moz-animation-fill-mode: both !important;
-    -o-animation-fill-mode: both !important;
-    animation-fill-mode: both !important;
-}
-
-/** 保持开始帧 **/
-.an-util-backwards{
-    -webkit-animation-fill-mode: backwards  !important;;
-    -moz-animation-fill-mode: backwards !important;
-    -o-animation-fill-mode: backwards !important;
-    animation-fill-mode: backwards !important;
-}
-
-
-
-
-/* 3D变形会消耗更多的内存与功耗，应确实有性能问题时才去使用它，兼在权衡  */
-.d3{
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
-
-
-/** 元素卡顿现象 **/
-.backface{
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-perspective: 1000;
-    -moz-perspective: 1000;
-    -ms-perspective: 1000;
-    perspective: 1000;
-}

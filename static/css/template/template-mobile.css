@@ -83,6 +83,16 @@ a:hover{
     width: 1003px;
 }
 
+.hidden-val {
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+.hide{
+    display: none;
+}
 
 
 /** 按钮大小 **/
@@ -140,5 +150,6 @@ a:hover{
 .input-default:-moz-placeholder {
     color:    white;
 }
+
 
 
