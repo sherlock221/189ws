@@ -13,7 +13,8 @@ define(function (require, exports, module) {
         DotList: $("#xy-dot"),
         Header: $("#xy-header"),
         collapsenNav : $("#collapsedNav"),
-        NavList   :  $(".xy-nav-main")
+        NavList   :  $(".xy-nav-main"),
+        footer   :   $(".footer-bottom")
     };
 
     var Cons = {
@@ -88,11 +89,23 @@ define(function (require, exports, module) {
                 //改变导航背景色
                 setTimeout(function () {
                     //判断是否需要反色
-                    if (index == "2" || index == "4")
+                    if (index == "2" || index == "4" || index =="5")
                         toggleInverse(true);
                     else
                         toggleInverse(false);
+
                 }, 0);
+
+
+                if(index == "5"){
+                    UI.footer.addClass("show");
+                }
+                else{
+                    UI.footer.removeClass("show");
+                }
+
+
+
                 transformLayer(index);
             };
 
@@ -186,7 +199,10 @@ define(function (require, exports, module) {
 
         if(isIE == 0){
             //webkit moz
-            UI.FixRelative.css("transform", "translate(0px, -" + height + "px)");
+            UI.FixRelative.css({
+                "transform": "translate(0px, -" + height + "px)",
+                "-webkit-transform": "translate(0px, -" + height + "px)"
+            });
         }
         else{
             //ie8 9
@@ -226,3 +242,5 @@ define(function (require, exports, module) {
     Event.init();
 
 });
+
+

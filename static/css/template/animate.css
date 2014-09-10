@@ -4,6 +4,36 @@
  * @time     1：20
  */
 
+
+.show.footer-bottom{
+    -webkit-animation : fadeIn 1s ease 1.3s;
+    animation : fadeIn 1s ease 1.3s;
+
+}
+
+@keyframes fadeIn {
+    0%{   opacity: 0;}
+    100% { opacity: 1;}
+}
+@-moz-keyframes fadeIn {
+    0%{   opacity: 0;}
+    100% { opacity: 1;}
+}
+@-webkit-keyframes fadeIn {
+    0%{   opacity: 0;}
+    100% { opacity: 1;}
+}
+@-o-keyframes fadeIn {
+    0%{   opacity: 0;}
+    100% { opacity: 1;}
+}
+@-ms-keyframes fadeIn{
+    0%{   opacity: 0;}
+    100% { opacity: 1;}
+}
+
+
+
 /** 放大 **/
 @keyframes amplify {
     0%{   transform: scale(0); opacity: 0;}
