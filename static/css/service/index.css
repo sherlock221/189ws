@@ -7,7 +7,12 @@
 
 
 
+.xy-font{
+    background-image: url("../../images/font.png");
+    width: 478px;
+    height: 1223px;
 
+}
 
 
 
@@ -154,10 +159,9 @@
 }
 /** 第一张图片测试 **/
 .xy-inner-message{
-    background-image: url("../../images/version.png");
-    background-repeat: no-repeat;
-    width: 351px;
-    height: 170px;
+    background-position:  0 -39px;
+    width: 402px;
+    height: 165px;
 }
 .xy-inner-message h2,.xy-inner-message p {
     width: 310px;
@@ -247,9 +251,9 @@
 
 /** 二号层文字 **/
 .xy-ui-text{
-    background: url("../../images/ui-text.jpg") no-repeat;
-    width: 536px;
-    height: 235px;
+    background-position: -28px -204px;
+    width: 374px;
+    height: 242px;
     position: relative;
     left: -85px; /** 图片进行hack **/
 }
@@ -266,9 +270,9 @@
 /* 我的大学 */
 
 .xy-my-school{
-    background-image: url("../../images/my-school.jpg");
-    width: 547px;
-    height: 292px;
+   background-position: -28px -446px;
+    width: 440px;
+    height: 195px;
     position: relative;
     left: -85px; /** 图片进行hack **/
 }
@@ -359,23 +363,23 @@
     right: 89px;
 }
 .xy-rotation-house{
-    background-position:  -373px -210px;
-    width: 70px;
-    height: 83px;
+    background-position:  -390px -213px;
+    width: 107px;
+    height: 76px;
     position: absolute;
-    bottom: 133px;
-    left: 176px;
+    bottom: 131px;
+    left: 154px;
 }
 
 /** 二号层手机 **/
 .xy-iphone-02{
    background-image: url("../../images/iphone02.png");
    width: 510px;
-   height: 316px;
+   height: 315px;
    position: relative;
-   right: 22px;
+   right: 75px;
 
-   bottom: 48px; /** 720 **/
+   bottom: -150px; /** 720 **/
 }
 
 .xy-ip-bg-01{
@@ -398,9 +402,9 @@
 
 /** 发现 **/
 .xy-discover{
-    background-image: url("../../images/discover.jpg");
-    width: 549px;
-    height: 280px;
+    background-position: -28px -640px;
+    width: 400px;
+    height: 199px;
     position: relative;
     left: -85px; /** 图片进行hack **/
     top: -20px;
@@ -500,9 +504,9 @@
 
 /** 生活 **/
 .xy-life-title{
-    background-image: url("../../images/life.jpg");
-    width: 472px;
-    height: 221px;
+    background-position:  -28px -838px;
+    width: 389px;
+    height: 166px;
 
     position: absolute;
     left: -54px;
@@ -510,25 +514,25 @@
 }
 
 .xy-life-content{
-position: absolute; width: 100%; top: 203px; height: 270px;
+position: absolute; width: 100%; top: 152px; height: 270px;
 }
 .xy-life-item{
     background-image: url("../../images/life-item.png");
 }
 
 .xy-life-small-dou{
-    background-position:  0px 0px;
-    width: 71px;
-    height: 83px;
+    background-position:  0px -123px;
+    width: 86px;
+    height: 82px;
 
     position: absolute;
     bottom: 0px;
     left: 141px;
 }
 .xy-life-big-dou{
-    background-position:  0 -83px;
-    width: 109px;
-    height: 128px;
+    background-position:  0 0px;
+    width: 113px;
+    height: 123px;
 
    margin-left: 50px;
     margin-right: 100px;
@@ -538,19 +542,20 @@ position: absolute; width: 100%; top: 203px; height: 270px;
     left: 193px;
 }
 .xy-life-ball{
-    background-position: 0px -362px;
-    width: 187px;
-    height: 187px;
+    background-position: 0px -218px;
+    width: 182px;
+    height: 180px;
+
     position: absolute;
-    right: 210px;
-    bottom: -92px;
+    right: 228px;
+    bottom: -75px;
 
 }
 
 .xy-life-air{
-    background-position: 0px -211px;
-    width: 151px;
-    height: 151px;
+    background-position: 0px -678px;
+    width: 150px;
+    height: 160px;
     position: absolute;
     bottom: 146px;
     right: 109px;
@@ -559,10 +564,9 @@ position: absolute; width: 100%; top: 203px; height: 270px;
 
 
 .xy-life-bag{
-    background-position:  0px -549px;
-    width: 196px;
-    height: 280px;
-
+    background-position:  0px -397px;
+    width: 200px;
+    height: 282px;
     position: absolute;
     bottom: 0;
     left: 429px;

@@ -98,11 +98,6 @@ var isMobile = {
 
 
 
-            var scroll=function(e){
-                console.log("滚动条初始化。。。");
-                window.location.href =  window.location.href;
-            }
-            window.onscroll=scroll;
 
 
 

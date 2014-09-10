@@ -49,7 +49,7 @@ Scroller.prototype = {
             this._clientW = _pageWidth;
             this._clientH = _pageHeight;
 
-            var li = $el.querySelectorAll('li');
+            var li = $el.querySelectorAll('#'+$el.id+' > li');
             for (var i = 0, len = li.length; i < len; i++){
                 li[i].style.width = this._clientW + 'px';
                 li[i].style.height = this._clientH + 'px';
@@ -173,7 +173,9 @@ Scroller.prototype = {
             var disTime = endTime - this.srartTime;
             //disTime = 50000/disTime;
             var _v = Math.abs(_dis / disTime);
-            this.$el.style.webkitTransitionDuration = '300ms';
+
+            //修改页面滚动速度
+            this.$el.style.webkitTransitionDuration = '400ms';
         }
 
         if(this.opts.snap){

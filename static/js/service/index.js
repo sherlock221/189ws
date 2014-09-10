@@ -48,8 +48,7 @@ define(function (require, exports, module) {
             //窗口发生变化改变
             $(window).resize(function () {
                 winh = $(window).height();
-                Cons.LayerHeight = winh > 720 ? winh : 720;
-                $targetFig.css("height", Cons.LayerHeight + "px");
+                window.location.href =  window.location.href;
             });
 
             //事件初始化

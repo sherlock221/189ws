@@ -1,0 +1,342 @@
+
+/** 动画部分css **/
+
+
+/** 第一屏幕文字 **/
+.screen01-text{
+    opacity: 0;
+    -webkit-animation: bounceInDown 0.6s linear 0.1s;
+    animation :  bounceInDown 0.6s linear 0.1s;
+}
+
+/** 下载按钮 **/
+.btn-dowload{
+    opacity: 0;
+    -webkit-animation: bounceIn 0.3s linear 0.8s ;
+    aanimation: bounceIn 0.3s linear 0.8s ;
+}
+
+/** logo 弹出 **/
+.logo-all{
+    opacity: 0;
+    -webkit-animation: bounceIn 0.3s linear 1.2s;
+    animation: bounceIn 0.3s linear 1.2s;
+}
+
+
+/** 星星闪烁 **/
+.start-03-1{
+    opacity: 0;
+    -webkit-animation: blink2 1s linear 0.8s infinite;
+
+}
+.star-01-1{
+    opacity: 0;
+    -webkit-animation: blink2 3s linear 2s infinite;
+}
+.star-03-2{
+    opacity: 0;
+    -webkit-animation: blink2 2s linear 1.2s infinite;
+}
+.star-02-1{
+    opacity: 0;
+    -webkit-animation: blink2 2.3s linear 1.5s infinite;
+}
+.star-02-2{
+    opacity: 0;
+    -webkit-animation: blink2 1s linear 0.4s infinite;
+}
+
+.star-02-3{
+    opacity: 0;
+    -webkit-animation: blink2 3s linear 1s infinite;
+}
+
+.star-02-4{
+    opacity: 0;
+    -webkit-animation: blink2 2s linear 1.2s infinite;
+}
+
+/** 手机 **/
+.iphone-mobile{
+    -webkit-animation: bounceInLeft 1s ease 0.5s;
+    animation: bounceInLeft 1s ease 0.5s;
+}
+
+/** 第二屏文字 **/
+.screen02-text{
+    -webkit-animation: bounceIn 0.3s linear 1.2s;
+    animation: bounceIn 0.3s linear 1.2s;
+}
+
+
+/** 底部弹出 **/
+.bottom-screen{
+    opacity: 0;
+    -webkit-animation: bounceInUp 0.3s linear  0.2s;
+}
+
+
+.screen03-text{
+    -webkit-animation: bounceIn 0.3s linear 1.8s;
+    animation: bounceIn 0.3s linear 1.8s;
+}
+/** 太阳 **/
+.sun{
+    -webkit-animation: rotate360 7s linear 0s infinite;
+    -moz-animation: rotate360 7s linear 0s infinite;
+    -ms-animation: rotate360 7s linear 0s infinite;
+    animation: rotate360 7s linear 0s infinite;
+}
+
+/** 两边云彩 **/
+.right-cloud{
+    -webkit-animation: cloud-02 10s ease-in 0s infinite;
+}
+.left-cloud{
+    -webkit-animation: cloud 15s ease-in 0s infinite;
+}
+
+/** 书籍 **/
+.book{
+    opacity: 0;
+    -webkit-animation: fanzhi 0.4s linear 0.6s ;
+}
+
+/** 地球 **/
+.earth-wrap{
+    opacity: 0;
+    -webkit-animation: fanzhi 0.4s linear 0.9s;
+}
+
+/** 房子 **/
+.big-house{
+    opacity: 0;
+    -webkit-animation: fanzhi 0.4s linear 1.2s;
+
+}
+
+/** 闪烁 **/
+.blink-01{
+    -webkit-animation: blink 1s linear 1.2s infinite;
+    -moz-animation: blink 1s linear 1.2s infinite;
+    -ms-animation: blink 1s linear 1.2s infinite;
+    animation: blink 1s linear 1.2s infinite;
+}
+
+
+.blink-02{
+    -webkit-animation: blink 1s linear 0.8s infinite;
+    -moz-animation: blink 1s linear 0.8s infinite;
+    -ms-animation: blink 1s linear 0.8s infinite;
+    animation: blink 1s linear 0.8s infinite;
+}
+
+  .blink-03{
+    -webkit-animation: blink 1s linear 0 infinite;
+    -moz-animation: blink 1s linear 0  infinite;
+    -ms-animation: blink 1s linear 0 infinite;
+    animation: blink 1s linear 0 infinite;
+}
+
+ .blink-04{
+    -webkit-animation: blink 1s linear 0.5s infinite;
+    -moz-animation: blink 1s linear 0.5s  infinite;
+    -ms-animation: blink 1s linear 0.5s infinite;
+    animation: blink 1s linear 0.5s infinite;
+}
+
+/** 桌子 **/
+.table-rt{
+    -webkit-animation: bounceIn 0.3s ease-in 0.2s;
+}
+
+.table-ft{
+    -webkit-animation: bounceIn 0.3s ease-in 0.2s;
+}
+
+
+/** 女孩 **/
+ .people-wo{
+    -webkit-animation: bounceInRight 1s ease  0.5s 1;
+    -moz-animation: bounceInRight  1s ease  0.8s
+    -ms-animation: bounceInRight 1s ease 1 0.8s
+    animation: bounceInRight 1s ease  0.8s
+}
+
+/** 男孩 **/
+.people-man{
+    -webkit-animation: bounceInLeft 1s ease  0.5s;
+    -moz-animation: bounceInLeft  1s ease 0.8s
+    -ms-animation: bounceInLeft 1s ease  0.8s
+    animation: bounceInLeft 1s ease  0.8s
+}
+
+.screen04-text{
+    -webkit-animation: bounceIn 0.3s ease-in 1.5s;
+    -moz-animation: bounceIn 0.3s ease-in  2s;
+    -ms-animation: bounceIn 0.3s ease-in  2;
+    animation: bounceIn 0.3s ease-in 2s;
+}
+
+
+
+
+
+
+
+/** 尾气 **/
+.ballon{
+    -webkit-animation: ballon-01 10s ease-in 0s infinite;
+}
+
+/** 底部横幅弹出 **/
+.bootomInUp{
+    -webkit-animation: bounceInUp 0.5s linear 0.8s;
+    -moz-animation: bounceInUp 0.5s linear 0.3s;
+    -ms-animation: bounceInUp 0.5s linear 0.3s;
+    animation: bounceInUp 0.5s linear 0.3s;
+}
+
+
+
+/** 山路 **/
+.m-road.tile{
+    -webkit-animation: tile 0.5s linear 0.5s;
+    animation :  tile 0.5s linear 0.5s;
+}
+
+/** 银行 **/
+ .bank{
+    -webkit-animation:  bounceInLeft  0.7s linear 1.4s;
+    animation:  bounceInLeft  0.7s linear 1.4s;
+}
+
+/** 山 **/
+ .mon{
+    -webkit-animation: fanzhi 0.4s linear 0.9s;
+    animation: fanzhi 0.4s linear 0.9s;
+}
+/** 线 **/
+.line.tile {
+    -webkit-animation: tile 0.5s linear 0.5s;
+    animation: tile 0.5s linear 0.5s;
+}
+
+/** 车 **/
+ .car{
+    -webkit-animation: bounceInRight 4s ease  1s;
+    animation: bounceInRight 4s ease  1s;
+}
+
+
+/** 缆车 **/
+.shanche{
+    -webkit-animation: bounceInRight 0.7s ease-in  1.8s;
+    animation: bounceInRight 0.7s ease-in  1.8s;
+}
+
+/** 车灯 **/
+  .deng{
+    opacity: 0;
+    -webkit-animation: blink 1s linear 4.8s infinite;
+    -moz-animation: blink 1s linear 4.8s infinite;
+    -ms-animation: blink 1s linear 4.8s infinite;
+    animation: blink 1s linear 4.8s infinite;
+}
+
+
+/** 烟雾 **/
+ .yan{
+    opacity: 0;
+    -webkit-animation: blink2 1.8s linear 2s infinite;
+    -moz-animation: blink 1s linear  4s infinite;
+    -ms-animation: blink 1s linear 4s infinite;
+    animation: blink 1s linear  4s infinite;
+}
+
+
+
+.screen05-text{
+    -webkit-animation: bounceInDown 0.6s linear 4.5s;
+    -moz-animation:  bounceInDown 0.6s linear 4.5s;
+    -ms-animation:  bounceInDown 0.6s linear 4.5s;
+    animation:  bounceInDown 0.6s linear 4.5s;
+}
+
+
+
+
+
+ .arrowDown{
+    -webkit-animation: arrowDown 1.2s ease-in 0s infinite;
+    -moz-animation: arrowDown 1.2s ease-in 0s infinite;
+    -ms-animation: arrowDown 1.2s ease-in 0s infinite;
+    animation: arrowDown 1.2s ease-in 0s infinite;
+}
+
+.arrowUp{
+    -webkit-animation: arrowUp 1.2s ease-in 0s infinite;
+    -moz-animation: arrowUp 1.2s ease-in 0s infinite;
+    -ms-animation: arrowUp 1.2s ease-in 0s infinite;
+    animation: arrowUp 1.2s ease-in 0s infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+/** 动画常用 **/
+/** 保持结束帧 **/
+.an-util-forwards{
+    -webkit-animation-fill-mode: forwards !important;
+    -moz-animation-fill-mode: forwards !important;
+    -o-animation-fill-mode: forwards !important;
+    animation-fill-mode: forwards !important;
+}
+
+.an-util-both{
+    -webkit-animation-fill-mode: both !important;
+    -moz-animation-fill-mode: both !important;
+    -o-animation-fill-mode: both !important;
+    animation-fill-mode: both !important;
+}
+
+/** 保持开始帧 **/
+.an-util-backwards{
+
+    -webkit-animation-fill-mode: backwards  !important;;
+    -moz-animation-fill-mode: backwards !important;
+    -o-animation-fill-mode: backwards !important;
+    animation-fill-mode: backwards !important;
+}
+
+
+
+
+/* 3D变形会消耗更多的内存与功耗，应确实有性能问题时才去使用它，兼在权衡  */
+.d3{
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+
+/** 元素卡顿现象 **/
+.backface{
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+}
