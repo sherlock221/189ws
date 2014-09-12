@@ -846,3 +846,8 @@ input, textarea  { -webkit-user-select:text; }
 
 
 
+
+/** loading 颜色 **/
+.mp_loading{
+    background-color: #0e79ef !important;
+}

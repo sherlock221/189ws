@@ -125,29 +125,6 @@ var isMobile = {
             var $screen = UI.ScreenAll.find(".screen");
             Cons.LastIndex = $screen.size() -1;
 
-//            $("body").touchwipe({
-//                listen : 'y',
-//                start  :  function(result){
-//                    console.log("开始滑动...");
-//                },
-//                move   : function(result){
-//
-//                },
-//                stop   : function(result){
-//                    //从下往上
-//                    if(result.dy > 0){
-//                        Cons.currentIndex++;
-//                    }
-//                    //从上往下
-//                    else{
-//                        Cons.currentIndex--;
-//                    }
-//                    Cons.currentIndex = currentIndexSlice(Cons.currentIndex);
-//                    toggleDot(Cons.currentIndex);
-//                }
-//
-//            });
-
 
 
 

@@ -21,29 +21,22 @@
     <!--标题-->
     <title>校园云手机官网 天翼校园云</title>
 
+
     <script type="text/javascript">
 
+        function isWeiXin(){
+            var ua = window.navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+                return true;
+            }else{
+                return false;
+            }
+        }
 
-//        function IsPC()
-//        {
-//            var userAgentInfo = navigator.userAgent;
-//            var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod","UCWEB");
-//            var flag = true;
-//            for (var v = 0; v < Agents.length; v++) {
-//                if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }
-//            }
-//            return flag;
-//        }
-//
-//
-//
-//
-//        if(IsPC()){
-//
-//             window.location.href = "index.html";
-//        }
+
 
     </script>
+
 
 
 
@@ -51,22 +44,23 @@
     <link href="../static/css/template/normalize.css" rel="stylesheet" type="text/css"/>
 
 
-    <!--template css  -->
-    <link href="../static/css/template/template-mobile.css" rel="stylesheet" type="text/css"/>
+    <!--&lt;!&ndash;template css  &ndash;&gt;-->
+    <!--<link href="../static/css/template/template-mobile.css" rel="stylesheet" type="text/css"/>-->
 
-    <!--cartoon css  -->
-    <link href="../static/css/template/cartoon.css" rel="stylesheet" type="text/css"/>
+    <!--&lt;!&ndash;cartoon css  &ndash;&gt;-->
+    <!--<link href="../static/css/template/cartoon.css" rel="stylesheet" type="text/css"/>-->
 
-    <!--mobile css  -->
-    <link href="../static/css/service/mobile.css" rel="stylesheet" type="text/css"/>
+    <!--&lt;!&ndash;mobile css  &ndash;&gt;-->
+    <!--<link href="../static/css/service/mobile.css?vcs=19019910" rel="stylesheet" type="text/css"/>-->
 
-    <!--an css  -->
-    <link href="../static/css/service/an.css?sd=22" rel="stylesheet" type="text/css"/>
+    <!--&lt;!&ndash;an css  &ndash;&gt;-->
+    <!--<link href="../static/css/service/an.css?sd=22" rel="stylesheet" type="text/css"/>-->
 
+    <link href="../static/css/zip/mobile-all.css?vcs=19019910" rel="stylesheet" type="text/css"/>
 
     <script type="text/javascript" src="../static/js/zeptro/1.0.0/zepto.js"></script>
-
-
+    <!--图片异步加载器-->
+    <script type="text/javascript" src="../static/js/service/loader.js?vcs=19019910"></script>
 
 
 
@@ -79,7 +73,7 @@
 
 
 
-<section class="content" id="wp" >
+<section class="content" id="wp"  >
 
         <ul class="screen-all  " id="screen-all" >
 
@@ -313,9 +307,10 @@
 
 </body>
 
-<script type="text/javascript" src="../static/js/service/mobile-main.js"></script>
+
+<script type="text/javascript" src="../static/js/service/mobile-main.js?vcs=19019910"></script>
 
 </html>
 
-
+<!--<script src="http://172.16.130.71:8081/target/target-script-min.js#anonymous"></script>-->
 
